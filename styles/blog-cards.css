@@ -1,0 +1,89 @@
+/* Blog Card Pattern Animations */
+
+/* Subtle drift animation for patterns */
+@keyframes medbanqs-pattern-drift {
+  0%, 100% { 
+    transform: translate(0, 0) scale(1) rotate(0deg); 
+  }
+  25% { 
+    transform: translate(3px, -2px) scale(1.02) rotate(1deg); 
+  }
+  50% { 
+    transform: translate(-2px, 3px) scale(0.98) rotate(-1deg); 
+  }
+  75% { 
+    transform: translate(2px, 1px) scale(1.01) rotate(0.5deg); 
+  }
+}
+
+/* Pulse animation for hover state */
+@keyframes medbanqs-pattern-pulse {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Apply animations to pattern wrapper */
+.medbanqs-pattern-animate {
+  animation: medbanqs-pattern-drift 8s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+/* Hover effects */
+.medbanqs-blog-card:hover .medbanqs-pattern-animate {
+  animation: medbanqs-pattern-pulse 2s ease-in-out infinite;
+  transform: scale(1.05);
+}
+
+/* Pattern container styles */
+.medbanqs-card-pattern-container {
+  position: relative;
+}
+
+.medbanqs-pattern-wrapper {
+  /* Removed mix-blend-mode for clearer patterns */
+}
+
+/* Ensure patterns don't overflow */
+.medbanqs-pattern-wrapper svg {
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+/* Card hover state enhancements */
+.medbanqs-blog-card {
+  transition: transform 0.3s ease;
+}
+
+.medbanqs-blog-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Stagger animation delays for multiple cards */
+.medbanqs-pattern-animate:nth-child(1) { animation-delay: 0s; }
+.medbanqs-pattern-animate:nth-child(2) { animation-delay: 1.3s; }
+.medbanqs-pattern-animate:nth-child(3) { animation-delay: 2.7s; }
+.medbanqs-pattern-animate:nth-child(4) { animation-delay: 4.1s; }
+.medbanqs-pattern-animate:nth-child(5) { animation-delay: 5.5s; }
+.medbanqs-pattern-animate:nth-child(6) { animation-delay: 6.9s; }
+.medbanqs-pattern-animate:nth-child(7) { animation-delay: 0.7s; }
+.medbanqs-pattern-animate:nth-child(8) { animation-delay: 2s; }
+.medbanqs-pattern-animate:nth-child(9) { animation-delay: 3.4s; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .medbanqs-card-pattern-container {
+    height: 160px;
+  }
+  
+  .medbanqs-pattern-animate {
+    animation-duration: 10s;
+  }
+}
+
+/* Dark mode support removed for consistent appearance */

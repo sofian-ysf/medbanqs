@@ -1,0 +1,29 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "medbanqs.com"
+        }
+      ],
+      "destination": "https://www.medbanqs.com/$1",
+      "permanent": true
+    }
+  ],
+  "functions": {
+    "app/api/**/*.ts": {
+      "maxDuration": 60
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/blog/generate",
+      "schedule": "0 12 * * *"
+    }
+  ]
+}

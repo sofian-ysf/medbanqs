@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* 
+  .bar and .navbar have default backgrounds here,
+  but they will be overridden by inline styles
+  (where we set transparent if scrolled).
+*/
+
+/* Fixed container */
+.bar {
+  width: 100%;
+  background-color: #fdfdff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Main navbar row */
+.navbar {
+  margin: 0 auto;
+  height: 80px; /* Reduced height for a more modern look */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background-color: #fdfdff;
+  padding: 0 40px;
+  max-width: 1400px;
+  z-index: 1;
+}
+
+/* Logo area */
+.logo-area {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  cursor: pointer !important;
+  z-index: 1;
+  position: relative;
+}
+
+.text-logo {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer !important;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* ======== NEW NAVBAR LAYOUT FOR NON-LOGGED IN USERS ======== */
+
+/* Center nav links container */
+.links-container-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 auto;
+}
+
+/* Right nav links container */
+.links-container-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Default link style for center and right containers */
+.navbar .links-container-center span,
+.navbar .links-container-right span:not(.request-demo-button) {
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+/* Add underline effect for center links */
+.navbar .links-container-center span:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #333;
+  transition: width 0.3s ease;
+}
+
+/* Hover effect for regular text links */
+.navbar .links-container-center span:hover {
+  color: black !important;
+}
+
+/* Expand underline on hover */
+.navbar .links-container-center span:hover:after {
+  width: 100%;
+}
+
+/* Login link style */
+.navbar .login-link {
+  color: #333;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.navbar .login-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #333;
+  transition: width 0.3s ease;
+}
+
+.navbar .login-link:hover {
+  color: black !important;
+}
+
+.navbar .login-link:hover:after {
+  width: 100%;
+}
+
+/* Request Demo button style */
+.navbar .request-demo-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px !important;
+  border-radius: 12px;
+  font-weight: 500;
+  background-color: black !important;
+  color: white !important;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: none;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  font-family: 'Poppins', sans-serif;
+  position: static !important;
+}
+
+.navbar .request-demo-button:hover {
+  background-color: #2a292a !important;
+}
+
+/* Override any inherited pseudo-elements */
+.navbar .request-demo-button:after {
+  display: none !important;
+}
+
+/* For mobile view */
+.request-demo-mobile {
+  background-color: black !important;
+  color: white !important;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* Desktop user icon (for logged-in users) */
+.desktop-user-icon {
+  display: block;
+  cursor: pointer;
+  color: #333;
+}
+
+/* MOBILE MENU BUTTON - keeping for potential future use */
+.mobile-menu-button {
+  display: block !important;
+  background: none;
+  border: none;
+  cursor: pointer !important;
+  padding: 10px;
+  z-index: 10;
+  margin-left: auto;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  position: relative;
+  width: auto;
+  height: auto;
+  min-width: 50px;
+  min-height: 50px;
+  flex-shrink: 0;
+}
+
+.mobile-menu-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.hamburger-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* Animated hamburger effect when menu is open - using a class on the button */
+.mobile-menu-button.active .hamburger-line:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-button.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-button.active .hamburger-line:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 99999;
+  pointer-events: none;
+}
+
+.mobile-menu.active {
+  pointer-events: auto;
+}
+
+/* Remove dark overlay on small screens */
+@media (max-width: 450px) {
+  .mobile-menu {
+    background: transparent;
+  }
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-content {
+  background: #fdfdff;
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+  padding: 80px 30px 30px; /* Increased top padding to avoid close button */
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Full screen menu on small devices */
+@media (max-width: 450px) {
+  .mobile-menu-content {
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+  }
+}
+
+.mobile-menu.active .mobile-menu-content {
+  transform: translateX(0);
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer !important;
+  color: #333;
+  padding: 10px;
+  outline: none;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.mobile-menu-close:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+/* Mobile nav link styles */
+.mobile-menu-content a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
+.mobile-menu-content a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 10px;
+  left: 16px;
+  background-color: #333;
+  transition: width 0.3s ease;
+}
+
+.mobile-menu-content a:hover {
+  color: black !important;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.mobile-menu-content a:hover:after {
+  width: calc(100% - 32px);
+}
+
+.mobile-menu-content .request-demo-mobile {
+  background-color: black !important;
+  color: white !important;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* USER SIDEBAR (slide in from the right) */
+.user-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 270px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.user-sidebar.open {
+  transform: translateX(0);
+}
+
+.user-sidebar-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-user-sidebar {
+  font-size: 2rem;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.user-sidebar-links {
+  margin-top: 20px;
+}
+
+.user-sidebar-links p {
+  margin: 1rem 0;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.user-sidebar-links p:hover {
+  color: black !important;
+}
+
+/* Footer-like section at bottom of user sidebar */
+.user-sidebar-bottom {
+  margin-top: auto;
+}
+
+.user-sidebar-bottom p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.user-sidebar-bottom p:hover {
+  color: black !important;
+}
+
+.nothing:hover {
+  color: #555 !important;
+  cursor: default;
+}
+
+/* Badge styling for unread notifications */
+.collaborate-link.unread {
+  position: relative;
+  font-weight: 600;
+  color: #000;
+}
+
+.unread-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 0.8rem;
+  color: red;
+  background-color: transparent;
+}
+
+.desktop-unread {
+  font-size: 0.8rem;
+  top: -5px;
+  right: -8px;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 950px) {
+  .links-container-center,
+  .links-container-right {
+    display: none !important;
+  }
+
+  .mobile-menu-button {
+    display: block !important;
+  }
+  
+  .desktop-user-icon {
+    margin-right: 15px;
+  }
+  
+  .navbar {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 70px;
+  }
+  
+  .m-img,
+  .occet-img,
+  .dot-img {
+    height: 40px;
+  }
+}

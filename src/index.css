@@ -1,0 +1,15 @@
+/* Import global styles */
+@import './global.css';
+
+/* Legacy styles - keeping for compatibility */
+body {
+  margin: 0;
+}
+
+code {
+  font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
+  font-size: 0.875em;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+}

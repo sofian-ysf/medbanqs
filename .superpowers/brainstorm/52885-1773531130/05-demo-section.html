@@ -1,0 +1,92 @@
+<h2>Interactive Demo Section</h2>
+<p class="subtitle">Show the product experience without any AI messaging</p>
+
+<div class="cards">
+  <div class="card" data-choice="question-preview" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #fbfaf4; padding: 20px;">
+      <div style="text-align: center; margin-bottom: 12px;">
+        <span style="font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 1px;">Try a Sample Question</span>
+      </div>
+      <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+        <div style="display: flex; justify-content: space-between; font-size: 9px; color: #999; margin-bottom: 10px;">
+          <span>Cardiology</span>
+          <span>Question 1 of 3</span>
+        </div>
+        <div style="font-size: 11px; color: #1a1a1a; margin-bottom: 12px; line-height: 1.4;">
+          A 55-year-old man presents with chest pain on exertion. ECG shows ST depression. What is the most appropriate next step?
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px; font-size: 10px;">
+          <div style="background: #f5f5f5; padding: 8px 12px; border-radius: 6px; color: #333;">A) Immediate angiography</div>
+          <div style="background: #d4edda; padding: 8px 12px; border-radius: 6px; color: #155724; border: 1px solid #c3e6cb;">B) Troponin levels ✓</div>
+          <div style="background: #f5f5f5; padding: 8px 12px; border-radius: 6px; color: #333;">C) Exercise stress test</div>
+          <div style="background: #f5f5f5; padding: 8px 12px; border-radius: 6px; color: #333;">D) Discharge with follow-up</div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 12px;">
+        <span style="background: #1a1a1a; color: white; padding: 8px 20px; border-radius: 50px; font-size: 10px;">Try More Questions</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A. Interactive Question Card (Recommended)</h3>
+      <p>Single question with selectable answers. Shows correct answer with brief explanation. Clean, focused, demonstrates core product value.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="mini-quiz" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #fbfaf4; padding: 20px;">
+      <div style="text-align: center; margin-bottom: 12px;">
+        <span style="font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 1px;">Quick 3-Question Quiz</span>
+      </div>
+      <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+        <!-- Progress bar -->
+        <div style="display: flex; gap: 4px; margin-bottom: 12px;">
+          <div style="flex: 1; height: 4px; background: #22c55e; border-radius: 2px;"></div>
+          <div style="flex: 1; height: 4px; background: #22c55e; border-radius: 2px;"></div>
+          <div style="flex: 1; height: 4px; background: #e5e5e5; border-radius: 2px;"></div>
+        </div>
+        <div style="font-size: 11px; color: #1a1a1a; margin-bottom: 10px;">
+          Question 2: Which drug is first-line for type 2 diabetes?
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; font-size: 9px;">
+          <div style="background: #f5f5f5; padding: 6px 12px; border-radius: 50px;">Insulin</div>
+          <div style="background: #1a1a1a; color: white; padding: 6px 12px; border-radius: 50px;">Metformin</div>
+          <div style="background: #f5f5f5; padding: 6px 12px; border-radius: 50px;">Gliclazide</div>
+        </div>
+        <div style="text-align: center; margin-top: 12px; font-size: 10px; color: #22c55e; font-weight: 600;">
+          2/2 Correct so far!
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B. Mini Quiz Flow</h3>
+      <p>3 quick questions with progress bar and score. More engaging but requires more interaction before signup CTA.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="feature-tabs" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #fbfaf4; padding: 20px;">
+      <div style="text-align: center; margin-bottom: 12px;">
+        <span style="font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 1px;">See How It Works</span>
+      </div>
+      <!-- Tabs -->
+      <div style="display: flex; justify-content: center; gap: 4px; margin-bottom: 12px;">
+        <span style="background: #1a1a1a; color: white; padding: 6px 12px; border-radius: 50px; font-size: 9px;">Questions</span>
+        <span style="background: rgba(0,0,0,0.05); padding: 6px 12px; border-radius: 50px; font-size: 9px; color: #666;">Progress</span>
+        <span style="background: rgba(0,0,0,0.05); padding: 6px 12px; border-radius: 50px; font-size: 9px; color: #666;">Flashcards</span>
+      </div>
+      <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); min-height: 80px;">
+        <div style="font-size: 10px; color: #666; margin-bottom: 8px;">5,000+ UKMLA Questions</div>
+        <div style="font-size: 11px; color: #1a1a1a; line-height: 1.4;">Practice with expertly crafted questions covering all UKMLA topics. Detailed explanations help you understand the reasoning.</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C. Tabbed Feature Preview</h3>
+      <p>Tabs showing different features (Questions, Progress, Flashcards). Less interactive but shows breadth of platform.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top: 20px; padding: 16px; background: #d4edda; border-radius: 8px;">
+  <strong style="color: #155724;">✓ No AI mentions in any option</strong>
+  <p style="color: #155724; margin: 8px 0 0 0; font-size: 13px;">All demos focus on questions, explanations, and progress tracking - no AI language anywhere.</p>
+</div>

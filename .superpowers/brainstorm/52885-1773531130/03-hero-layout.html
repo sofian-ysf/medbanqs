@@ -1,0 +1,96 @@
+<h2>Hero Section Layout</h2>
+<p class="subtitle">The first thing visitors see - must convert within 5 seconds</p>
+
+<div class="cards">
+  <div class="card" data-choice="centered" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: linear-gradient(180deg, #fbfaf4 0%, #fff 100%); padding: 20px; min-height: 200px;">
+      <!-- Trust badge -->
+      <div style="text-align: center; margin-bottom: 16px;">
+        <span style="background: rgba(0,0,0,0.05); padding: 6px 12px; border-radius: 50px; font-size: 10px; color: #666;">Trusted by 5,000+ medical students</span>
+      </div>
+      <!-- Headline -->
+      <div style="text-align: center; font-size: 18px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">
+        UKMLA Questions &<br>Practice Tests 2025
+      </div>
+      <!-- Subheading -->
+      <div style="text-align: center; font-size: 10px; color: #666; margin-bottom: 16px;">
+        Your 24/7 study partner for medical finals
+      </div>
+      <!-- CTAs -->
+      <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: 16px;">
+        <div style="background: #1a1a1a; color: white; padding: 6px 14px; border-radius: 50px; font-size: 10px;">Get Started</div>
+        <div style="background: rgba(0,0,0,0.05); color: #1a1a1a; padding: 6px 14px; border-radius: 50px; font-size: 10px; border: 1px solid rgba(0,0,0,0.1);">Take Demo</div>
+      </div>
+      <!-- Stats row -->
+      <div style="display: flex; justify-content: center; gap: 16px; font-size: 9px;">
+        <div style="text-align: center;"><strong style="color: #1a1a1a;">4.8/5</strong><br><span style="color: #999;">Rating</span></div>
+        <div style="text-align: center;"><strong style="color: #1a1a1a;">94%</strong><br><span style="color: #999;">Pass Rate</span></div>
+        <div style="text-align: center;"><strong style="color: #1a1a1a;">5,000+</strong><br><span style="color: #999;">Questions</span></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A. Centered Focus (Recommended)</h3>
+      <p>All content centered, no distractions. Trust badge → Headline → CTAs → Stats. Maximum clarity, works perfectly on all devices.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="split-demo" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: linear-gradient(180deg, #fbfaf4 0%, #fff 100%); padding: 20px; min-height: 200px;">
+      <div style="display: flex; gap: 16px;">
+        <!-- Left: Content -->
+        <div style="flex: 1;">
+          <span style="background: rgba(0,0,0,0.05); padding: 4px 8px; border-radius: 50px; font-size: 8px; color: #666;">Trusted by 5,000+</span>
+          <div style="font-size: 14px; font-weight: 700; color: #1a1a1a; margin: 8px 0;">
+            UKMLA Questions & Practice Tests
+          </div>
+          <div style="font-size: 9px; color: #666; margin-bottom: 12px;">
+            Your 24/7 study partner
+          </div>
+          <div style="display: flex; gap: 6px;">
+            <div style="background: #1a1a1a; color: white; padding: 5px 10px; border-radius: 50px; font-size: 9px;">Get Started</div>
+            <div style="background: rgba(0,0,0,0.05); color: #1a1a1a; padding: 5px 10px; border-radius: 50px; font-size: 9px;">Demo</div>
+          </div>
+        </div>
+        <!-- Right: Demo preview -->
+        <div style="flex: 1; background: white; border-radius: 8px; padding: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); font-size: 8px;">
+          <div style="color: #999; margin-bottom: 6px;">Sample Question</div>
+          <div style="color: #1a1a1a; margin-bottom: 8px;">A 45-year-old presents with...</div>
+          <div style="background: #f5f5f5; padding: 4px 8px; border-radius: 4px; margin-bottom: 4px;">A) Option</div>
+          <div style="background: #d4edda; padding: 4px 8px; border-radius: 4px; color: #155724;">B) Correct ✓</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B. Split with Demo Preview</h3>
+      <p>Left side has content/CTAs, right side shows a mini question preview. Shows the product immediately but more complex on mobile.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="video-bg" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: linear-gradient(180deg, #1a1a1a 0%, #333 100%); padding: 20px; min-height: 200px;">
+      <!-- Overlay content on dark bg -->
+      <div style="text-align: center; margin-bottom: 12px;">
+        <span style="background: rgba(255,255,255,0.15); padding: 6px 12px; border-radius: 50px; font-size: 10px; color: rgba(255,255,255,0.9);">Trusted by 5,000+ medical students</span>
+      </div>
+      <div style="text-align: center; font-size: 18px; font-weight: 700; color: white; margin-bottom: 8px;">
+        UKMLA Questions &<br>Practice Tests 2025
+      </div>
+      <div style="text-align: center; font-size: 10px; color: rgba(255,255,255,0.7); margin-bottom: 16px;">
+        Your 24/7 study partner for medical finals
+      </div>
+      <div style="display: flex; justify-content: center; gap: 8px;">
+        <div style="background: white; color: #1a1a1a; padding: 6px 14px; border-radius: 50px; font-size: 10px;">Get Started</div>
+        <div style="background: rgba(255,255,255,0.15); color: white; padding: 6px 14px; border-radius: 50px; font-size: 10px; border: 1px solid rgba(255,255,255,0.3);">Take Demo</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C. Dark with Video/Animation BG</h3>
+      <p>Dark hero with subtle background animation. More dramatic but doesn't match the warm, professional tone of rest of site.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top: 24px; padding: 16px; background: #e8f4fd; border-radius: 8px;">
+  <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #0c5460;">Your content preserved:</h4>
+  <p style="margin: 0; font-size: 13px; color: #0c5460;">"Your 24/7 study partner" - keeping this messaging as requested, just removing any AI mentions</p>
+</div>

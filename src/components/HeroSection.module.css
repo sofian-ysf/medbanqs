@@ -1,0 +1,156 @@
+/* HeroSection CSS - Exact copy from original */
+.hero_section53 {
+  background-color: white;
+  padding: 100px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.hero_content53 {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* left align everything */
+}
+
+/* Title */
+.hero_title53 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.2;
+  margin: 20px 0 20px;
+  text-align: left;
+  max-width: 100%;
+}
+
+/* Word-level animation */
+.animated_word53 {
+  display: inline-block;
+  opacity: 0;
+  position: relative;
+  transition: 
+    transform 0.8s cubic-bezier(0.19,1,0.22,1),
+    opacity 0.8s ease;
+}
+
+/* Start from below (e.g. 40px) */
+.from_bottom {
+  transform: translateY(40px);
+}
+
+/* Active => move to normal position, fade in */
+.animated_word53.active {
+  transform: none;
+  opacity: 1;
+}
+
+/* Subtitle fade up from below */
+.hero_subtitle53 {
+  font-size: 1.3rem;
+  color: #333;
+  max-width: 700px;
+  margin: 0 0 40px;
+  line-height: 1.5;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease 0.5s, transform 0.8s ease 0.5s;
+}
+.subtitle_animate53 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cards container fade up */
+.cards_container53 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 800px;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease 0.8s, transform 0.8s ease 0.8s;
+}
+.cards_animate53 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Info cards */
+.info_card53 {
+  background: #f6f6ff;
+  border-radius: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+  flex: 1 1 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+}
+.info_card53 h2 {
+  font-size: 1.2rem;
+  margin: 0 0 5px;
+  color: #000;
+  font-weight: 100;
+}
+.info_card53 h3 {
+  font-size: 1.1rem;
+  margin: 0 0 15px;
+  color: #333;
+  font-weight: 700;
+}
+.info_card53 p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+/* Card Buttons */
+.card_button53 {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 5px 30px;
+  border-radius: 35px;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.card_button53:hover {
+  background-color: #333;
+}
+.card_button_outline53 {
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  border: 1px solid #000;
+}
+.card_button_outline53:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 840px) {
+  .hero_title53 {
+    font-size: 3rem;
+    margin-top: 0px;
+  }
+
+  .cards_container53{
+      display: grid;
+      margin: 0 auto;
+      width: 90vw;
+  }
+  .info_card53 {
+      max-width: 90vw;
+  }
+}
+@media (max-width: 480px) {
+  .hero_title53 {
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,52 @@
+# MedBanqs Robots.txt
+# https://www.medbanqs.com/
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow search engines to access important pages
+Allow: /ukmla-questions
+Allow: /medical-school-exam
+Allow: /questions
+Allow: /review-mistakes
+Allow: /dashboard
+Allow: /pricing
+Allow: /auth
+Allow: /blog
+
+# Sitemap location
+Sitemap: https://www.medbanqs.com/sitemap.xml
+
+# Crawl delay for bots
+User-agent: *
+Crawl-delay: 1
+
+# Specific bot rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

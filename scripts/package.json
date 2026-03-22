@@ -1,0 +1,12 @@
+{
+  "name": "firebase-admin-scripts",
+  "version": "1.0.0",
+  "description": "Admin scripts for Firebase operations",
+  "main": "listAllCollections.js",
+  "scripts": {
+    "list-collections": "node listAllCollections.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^11.11.0"
+  }
+}

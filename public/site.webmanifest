@@ -1,0 +1,21 @@
+{
+  "name": "MedBanqs",
+  "short_name": "MedBanqs",
+  "description": "UKMLA preparation platform with 5,000+ practice questions, AI-powered explanations, and personalized study plans. Achieve 94% pass rates.",
+  "icons": [
+    {
+      "src": "/mastermla-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/mastermla-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#8b5cf6"
+} 
