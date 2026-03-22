@@ -2,12 +2,11 @@ import type { NextConfig } from "next";
 import path from "path";
 
 const nextConfig: NextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   typescript: {
     ignoreBuildErrors: true,
   },
+  // Use Turbopack (default in Next.js 16)
+  turbopack: {},
   
   // Redirect configuration for www subdomain
   async redirects() {
