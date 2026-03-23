@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { BlogStorage } from '@/lib/blog/storage';
+import { getAllBlogs, getBlogBySlug } from '@/lib/blog/blog-data';
 import { BlogPost } from '@/types/blog';
 import PillNavigation from '@/components/landing/PillNavigation';
 import { BlogPatterns, blogCardColors } from '@/components/blog/BlogPatterns';
@@ -12,18 +12,20 @@ interface BlogPostPageProps {
   }>;
 }
 
-async function getBlogPost(slug: string): Promise<BlogPost | null> {
-  const storage = new BlogStorage();
-  return await storage.getBlog(slug);
+// Generate static params for all blog posts
+export async function generateStaticParams() {
+  const blogs = getAllBlogs();
+  return blogs.map((blog) => ({
+    slug: blog.slug,
+  }));
 }
 
-async function getRelatedPosts(currentPost: BlogPost): Promise<BlogPost[]> {
-  const storage = new BlogStorage();
-  const allPosts = await storage.getAllBlogs();
-  
+function getRelatedPosts(currentPost: BlogPost): BlogPost[] {
+  const allPosts = getAllBlogs();
+
   return allPosts
-    .filter(post => 
-      post.id !== currentPost.id && 
+    .filter(post =>
+      post.id !== currentPost.id &&
       (post.category === currentPost.category ||
        post.tags.some(tag => currentPost.tags.includes(tag)))
     )
@@ -32,7 +34,7 @@ async function getRelatedPosts(currentPost: BlogPost): Promise<BlogPost[]> {
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = await getBlogPost(slug);
+  const post = getBlogBySlug(slug);
   
   if (!post) {
     return {
@@ -67,13 +69,13 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
-  const post = await getBlogPost(slug);
-  
+  const post = getBlogBySlug(slug);
+
   if (!post) {
     notFound();
   }
 
-  const relatedPosts = await getRelatedPosts(post);
+  const relatedPosts = getRelatedPosts(post);
   
   // Generate a consistent index for this post based on its ID
   const patternIndex = post.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0) % BlogPatterns.length;

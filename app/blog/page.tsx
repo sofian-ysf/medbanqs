@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { BlogStorage } from '@/lib/blog/storage';
+import { getAllBlogs } from '@/lib/blog/blog-data';
 import { BlogPost } from '@/types/blog';
 import PillNavigation from '@/components/landing/PillNavigation';
 import BlogCard from '@/components/blog/BlogCard';
@@ -19,13 +19,8 @@ export const metadata: Metadata = {
   },
 };
 
-async function getBlogs(): Promise<BlogPost[]> {
-  const storage = new BlogStorage();
-  return await storage.getAllBlogs();
-}
-
 export default async function BlogPage() {
-  const blogs = await getBlogs();
+  const blogs = getAllBlogs();
   
   const categories = Array.from(new Set(blogs.map(blog => blog.category)));
   
