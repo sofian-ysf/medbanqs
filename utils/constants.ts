@@ -191,8 +191,8 @@ export const FOOTER_SECTIONS = [
 ];
 
 export const NAVIGATION_ITEMS = [
+  { href: "/try-free", label: "Try Free" },
   { href: "/features", label: "Features" },
   { href: "/pricing", label: "Pricing" },
   { href: "/blog", label: "Blog" },
-  { href: "/about", label: "About" },
 ];

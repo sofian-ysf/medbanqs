@@ -19,10 +19,10 @@ const Navigation = () => {
   
   // Fallback navigation items in case import fails
   const navItems = NAVIGATION_ITEMS && NAVIGATION_ITEMS.length > 0 ? NAVIGATION_ITEMS : [
+    { href: "/try-free", label: "Try Free" },
     { href: "/features", label: "Features" },
     { href: "/pricing", label: "Pricing" },
     { href: "/blog", label: "Blog" },
-    { href: "/about", label: "About" },
   ];
 
   useEffect(() => {
@@ -111,7 +111,7 @@ const Navigation = () => {
               <div className="relative" ref={dropdownRef}>
                 <button
                   onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-                  className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+                  className="flex items-center space-x-2 px-2 sm:px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
                     {getUserInitials()}
@@ -119,7 +119,7 @@ const Navigation = () => {
                   <span className="hidden md:block text-sm font-medium text-gray-700">
                     {getUserDisplayName()}
                   </span>
-                  <ChevronDown className="w-4 h-4 text-gray-500" />
+                  <ChevronDown className="w-4 h-4 text-gray-500 hidden sm:block" />
                 </button>
 
                 {isUserMenuOpen && (
@@ -128,7 +128,7 @@ const Navigation = () => {
                       <p className="text-sm font-medium text-gray-900">{getUserDisplayName()}</p>
                       <p className="text-xs text-gray-500">{user.email}</p>
                     </div>
-                    
+
                     <Link
                       href="/dashboard"
                       onClick={() => setIsUserMenuOpen(false)}
@@ -170,6 +170,13 @@ const Navigation = () => {
               </div>
             ) : (
               <>
+                {/* Try Free - visible on mobile */}
+                <Link
+                  href="/try-free"
+                  className="md:hidden text-emerald-600 font-semibold text-sm px-3 py-1.5 rounded-full border border-emerald-600 hover:bg-emerald-50 transition-all"
+                >
+                  Try Free
+                </Link>
                 <Link
                   href="/auth"
                   className="hidden md:inline-block text-black font-semibold relative group transition-all duration-300"
@@ -188,11 +195,11 @@ const Navigation = () => {
           </div>
 
           <button
-            className="md:hidden text-black ml-2 p-1.5 sm:p-2 -mr-1"
+            className="md:hidden text-black ml-2 p-1.5 -mr-1"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
@@ -200,41 +207,54 @@ const Navigation = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-lg border-t border-gray-200 max-h-[calc(100vh-60px)] overflow-y-auto">
-          <div className="px-4 py-3 space-y-2">
-            {navItems.map((item) => (
+          <div className="px-4 py-4 space-y-1">
+            {/* Try Free - Highlighted at top */}
+            <Link
+              href="/try-free"
+              className="flex items-center justify-between bg-emerald-50 text-emerald-700 font-semibold py-3 px-4 rounded-xl mb-3"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <span>Try 15 Free Questions</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+
+            {navItems.filter(item => item.href !== '/try-free').map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
-                className="block text-black font-medium py-3 text-base border-b border-gray-100 last:border-b-0"
+                className="block text-gray-700 font-medium py-3 px-2 text-base hover:bg-gray-50 rounded-lg transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
-            <div className="pt-3 border-t border-gray-200">
+
+            <div className="pt-4 mt-2 border-t border-gray-200">
               {user ? (
                 <>
-                  <div className="pb-3">
+                  <div className="pb-3 px-2">
                     <p className="text-sm font-medium text-gray-900">{getUserDisplayName()}</p>
                     <p className="text-xs text-gray-500">{user.email}</p>
                   </div>
                   <Link
                     href="/dashboard"
-                    className="block text-black font-medium py-3 text-base"
+                    className="block text-gray-700 font-medium py-3 px-2 text-base hover:bg-gray-50 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Dashboard
                   </Link>
                   <Link
                     href="/subscription"
-                    className="block text-black font-medium py-3 text-base"
+                    className="block text-gray-700 font-medium py-3 px-2 text-base hover:bg-gray-50 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Subscription
                   </Link>
                   <Link
                     href="/account-settings"
-                    className="block text-black font-medium py-3 text-base"
+                    className="block text-gray-700 font-medium py-3 px-2 text-base hover:bg-gray-50 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Account Settings
@@ -244,28 +264,28 @@ const Navigation = () => {
                       handleSignOut();
                       setIsMenuOpen(false);
                     }}
-                    className="block w-full text-left text-red-600 font-medium py-3 text-base"
+                    className="block w-full text-left text-red-600 font-medium py-3 px-2 text-base hover:bg-red-50 rounded-lg mt-2"
                   >
                     Sign Out
                   </button>
                 </>
               ) : (
-                <>
+                <div className="space-y-3 pt-2">
                   <Link
                     href="/auth"
-                    className="block text-black font-semibold py-3 text-lg text-center"
+                    className="block text-center text-gray-700 font-semibold py-3 text-base border border-gray-300 rounded-xl hover:bg-gray-50 transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Log In
                   </Link>
                   <Link
                     href="/pricing"
-                    className="block w-full bg-black text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition-all duration-300 text-center mt-4 text-lg font-semibold"
+                    className="block w-full bg-black text-white py-3.5 rounded-xl text-center text-base font-semibold hover:bg-gray-800 transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Get Started
                   </Link>
-                </>
+                </div>
               )}
             </div>
           </div>

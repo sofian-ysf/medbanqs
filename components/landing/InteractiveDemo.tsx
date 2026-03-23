@@ -112,10 +112,10 @@ const InteractiveDemo = () => {
                   Try Again
                 </button>
                 <Link
-                  href="/auth"
+                  href="/try-free"
                   className="pill-btn pill-btn-primary px-6 py-3 text-sm font-medium text-center"
                 >
-                  Try More Questions
+                  Try 15 Free Questions →
                 </Link>
               </>
             ) : (
