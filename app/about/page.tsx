@@ -44,7 +44,7 @@ export default function AboutPage() {
     { year: "2023", event: "MedBanqs founded with a vision to transform medical education" },
     { year: "2024", event: "Launched comprehensive learning platform with 5,000+ questions" },
     { year: "2024", event: "Reached 1,000+ active medical students" },
-    { year: "2025", event: "Expanded to 5,000+ questions and achieved 94% pass rate" }
+    { year: "2025", event: "Expanded to 5,000+ questions and achieved 97% pass rate" }
   ];
 
   return (
@@ -95,7 +95,7 @@ export default function AboutPage() {
                   <div className="flex items-start">
                     <Award className="w-8 h-8 text-black mr-4 flex-shrink-0" />
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-2">94% Pass Rate</h3>
+                      <h3 className="font-bold text-gray-900 mb-2">97% Pass Rate</h3>
                       <p className="text-gray-600">Significantly higher than the national average</p>
                     </div>
                   </div>

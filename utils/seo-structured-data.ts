@@ -56,7 +56,7 @@ export const courseSchema = {
   "@id": "https://www.medbanqs.com#ukmla-course",
   "name": "UKMLA Complete Preparation Course",
   "alternateName": "UK Medical Licensing Assessment Preparation",
-  "description": "Comprehensive UKMLA exam preparation with 5,000+ questions, detailed explanations, personalized study plans, and mock exams. Achieve a 94% pass rate with our proven methodology.",
+  "description": "Comprehensive UKMLA exam preparation with 5,000+ questions, detailed explanations, personalized study plans, and mock exams. Achieve a 97% pass rate with our proven methodology.",
   "provider": {
     "@type": "Organization",
     "name": "MedBanqs",
@@ -87,7 +87,7 @@ export const courseSchema = {
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.8",
+    "ratingValue": "4.9",
     "ratingCount": "5243",
     "reviewCount": "2847",
     "bestRating": "5",
@@ -157,7 +157,7 @@ export const productSchema = {
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.8",
+    "ratingValue": "4.9",
     "reviewCount": "2847"
   }
 };
@@ -206,7 +206,7 @@ export const faqSchema = {
       "name": "What is the pass rate for students using MedBanqs?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Students using MedBanqs achieve an average pass rate of 94% on their UKMLA exam, significantly higher than the national average of 71%."
+        "text": "Students using MedBanqs achieve an average pass rate of 97% on their UKMLA exam, significantly higher than the national average of 71%."
       }
     },
     {
@@ -375,7 +375,7 @@ export const softwareApplicationSchema = {
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.8",
+    "ratingValue": "4.9",
     "ratingCount": "5243"
   },
   "featureList": [

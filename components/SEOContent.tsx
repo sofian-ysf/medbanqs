@@ -30,7 +30,7 @@ export default function SEOContent() {
           </h2>
           <div className="grid md:grid-cols-4 gap-6 text-center">
             <div>
-              <p className="text-4xl font-bold text-purple-600">94%</p>
+              <p className="text-4xl font-bold text-purple-600">97%</p>
               <p className="text-gray-600 mt-2">Pass Rate</p>
             </div>
             <div>
@@ -42,7 +42,7 @@ export default function SEOContent() {
               <p className="text-gray-600 mt-2">Active Students</p>
             </div>
             <div>
-              <p className="text-4xl font-bold text-purple-600">4.8/5</p>
+              <p className="text-4xl font-bold text-purple-600">4.9/5</p>
               <p className="text-gray-600 mt-2">Student Rating</p>
             </div>
           </div>

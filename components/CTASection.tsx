@@ -13,7 +13,7 @@ const CTASection: React.FC = () => {
           </h2>
 
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed font-medium px-2 sm:px-0">
-            Join 5,000+ medical students achieving 94% pass rates with personalized learning
+            Join 5,000+ medical students achieving 97% pass rates with personalized learning
           </p>
 
           <div className="flex justify-center items-center px-4 sm:px-0">

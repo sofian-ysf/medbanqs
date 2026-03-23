@@ -44,7 +44,7 @@ const HeroSection: React.FC = () => {
               style={{ transitionDelay: "200ms" }}
             >
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 leading-relaxed px-4 sm:px-0">
-                Master UKMLA with 5,000+ medical questions, expert explanations, and personalized study plans. Join 5,000+ medical students achieving 94% pass rates.
+                Master UKMLA with 5,000+ medical questions, expert explanations, and personalized study plans. Join 5,000+ medical students achieving 97% pass rates.
               </p>
             </div>
 

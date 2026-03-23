@@ -62,7 +62,7 @@ export default function MedicalSchoolExamPage() {
     {
       name: "Priya Patel",
       university: "UCL Medical School",
-      score: "94%",
+      score: "97%",
       quote: "5,000+ questions covering every topic imaginable. The detailed explanations were like having a consultant available 24/7."
     }
   ];
@@ -176,7 +176,7 @@ export default function MedicalSchoolExamPage() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">MedBanqs Pass Rate</span>
-                  <span className="text-2xl font-bold text-blue-600">94%</span>
+                  <span className="text-2xl font-bold text-blue-600">97%</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">Average Score Improvement</span>
@@ -188,7 +188,7 @@ export default function MedicalSchoolExamPage() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">Student Satisfaction</span>
-                  <span className="text-2xl font-bold text-amber-600">4.8/5</span>
+                  <span className="text-2xl font-bold text-amber-600">4.9/5</span>
                 </div>
               </div>
             </div>

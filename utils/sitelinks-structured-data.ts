@@ -123,7 +123,7 @@ export const homepageStructuredData = {
       },
       "datePublished": "2024-01-01T00:00:00+00:00",
       "dateModified": new Date().toISOString(),
-      "description": "Master UKMLA with 5,000+ practice questions, expert explanations, and personalized study plans. Join 5,000+ medical students achieving 94% pass rates.",
+      "description": "Master UKMLA with 5,000+ practice questions, expert explanations, and personalized study plans. Join 5,000+ medical students achieving 97% pass rates.",
       "breadcrumb": {
         "@id": "https://www.medbanqs.com/#breadcrumb"
       },

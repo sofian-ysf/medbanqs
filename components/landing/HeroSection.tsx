@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 
 const STATS = [
-  { value: "4.8/5", label: "Rating" },
-  { value: "94%", label: "Pass Rate" },
+  { value: "4.9/5", label: "Rating" },
+  { value: "97%", label: "Pass Rate" },
   { value: "5,000+", label: "Questions" },
   { value: "5,000+", label: "Students" },
 ];

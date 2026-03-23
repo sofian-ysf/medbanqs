@@ -53,7 +53,7 @@ export default function UKMLAAKTPage() {
     { feature: 'Question Bank Size', medbanqs: '5,000+ Questions', others: '2,000-4,000' },
     { feature: 'Explanations', medbanqs: 'Detailed with NICE Guidelines', others: 'Basic or None' },
     { feature: 'Mock Exams', medbanqs: 'Unlimited Timed Mocks', others: '2-5 Mock Exams' },
-    { feature: 'Pass Rate', medbanqs: '94%', others: '71% (National Average)' },
+    { feature: 'Pass Rate', medbanqs: '97%', others: '71% (National Average)' },
     { feature: 'Updates', medbanqs: 'Weekly Updates', others: 'Quarterly Updates' },
     { feature: 'Price', medbanqs: 'From £25/month', others: '£30-60/month' },
     { feature: 'Plans', medbanqs: 'Flexible 3-12 Month Options', others: 'Monthly Only' },
@@ -100,7 +100,7 @@ export default function UKMLAAKTPage() {
             {/* Trust Badge */}
             <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="w-4 h-4" />
-              <span>Trusted by 5,000+ Medical Students | 94% Pass Rate</span>
+              <span>Trusted by 5,000+ Medical Students | 97% Pass Rate</span>
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
@@ -138,7 +138,7 @@ export default function UKMLAAKTPage() {
                 <div className="text-sm text-gray-600">SBA Questions</div>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md">
-                <div className="text-3xl font-bold text-green-600">94%</div>
+                <div className="text-3xl font-bold text-green-600">97%</div>
                 <div className="text-sm text-gray-600">Pass Rate</div>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md">
@@ -518,7 +518,7 @@ export default function UKMLAAKTPage() {
             Start Your UKMLA AKT Preparation Today
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join 5,000+ medical students achieving 94% pass rates with MedBanqs
+            Join 5,000+ medical students achieving 97% pass rates with MedBanqs
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -568,7 +568,7 @@ export default function UKMLAAKTPage() {
             },
             "aggregateRating": {
               "@type": "AggregateRating",
-              "ratingValue": "4.8",
+              "ratingValue": "4.9",
               "reviewCount": "2847"
             }
           })

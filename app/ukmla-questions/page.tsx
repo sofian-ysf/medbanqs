@@ -4,7 +4,7 @@ import { CheckCircle, ArrowRight, Brain, Target, TrendingUp, Award } from 'lucid
 
 export const metadata: Metadata = {
   title: 'UKMLA Questions - 5,000+ Practice Questions with Expert Explanations | MedBanqs',
-  description: 'Access 5,000+ UKMLA practice questions with detailed expert explanations. Covers all topics: cardiology, respiratory, pharmacology, anatomy. 94% pass rate.',
+  description: 'Access 5,000+ UKMLA practice questions with detailed expert explanations. Covers all topics: cardiology, respiratory, pharmacology, anatomy. 97% pass rate.',
   keywords: 'UKMLA questions, UKMLA practice questions, UKMLA question bank, medical licensing questions UK, UKMLA mock questions, UKMLA past papers, UKMLA exam questions, medical student questions UK',
   openGraph: {
     title: 'UKMLA Question Bank - 5,000+ Medical Questions | MedBanqs',
@@ -61,7 +61,7 @@ export default function UKMLAQuestionsPage() {
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Master every topic in the UK Medical Licensing Assessment with our comprehensive question bank. 
-              Get instant expert explanations, track your progress, and join thousands achieving 94% pass rates.
+              Get instant expert explanations, track your progress, and join thousands achieving 97% pass rates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/pricing" className="inline-flex items-center justify-center px-8 py-4 bg-black text-white rounded-full font-semibold hover:bg-gray-800 transition-colors">
@@ -81,7 +81,7 @@ export default function UKMLAQuestionsPage() {
               <div className="text-gray-600">Practice Questions</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-emerald-600 mb-2">94%</div>
+              <div className="text-3xl font-bold text-emerald-600 mb-2">97%</div>
               <div className="text-gray-600">Pass Rate</div>
             </div>
             <div className="text-center">

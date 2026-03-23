@@ -89,10 +89,10 @@ export default function FeaturesPage() {
   ];
 
   const stats = [
-    { number: "94%", label: "Pass Rate" },
+    { number: "97%", label: "Pass Rate" },
     { number: "5,000+", label: "Questions" },
     { number: "5,000+", label: "Active Students" },
-    { number: "4.8/5", label: "Student Rating" }
+    { number: "4.9/5", label: "Student Rating" }
   ];
 
   return (

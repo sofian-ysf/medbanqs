@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     default: 'UKMLA AKT Question Bank 2025 | MedBanqs - 5,000+ SBA Questions for Medical School Finals',
     template: '%s | MedBanqs - UKMLA AKT Preparation'
   },
-  description: 'Pass UKMLA AKT 2025 with confidence. 5,000+ single best answer (SBA) questions for medical school finals & MLA AKT exam. Expert explanations, mock exams, 94% pass rate. Perfect for UK medical students & IMGs.',
+  description: 'Pass UKMLA AKT 2025 with confidence. 5,000+ single best answer (SBA) questions for medical school finals & MLA AKT exam. Expert explanations, mock exams, 97% pass rate. Perfect for UK medical students & IMGs.',
   applicationName: 'MedBanqs',
   keywords: 'UKMLA AKT, MLA AKT, UKMLA AKT question bank, medical school finals UK, SBA questions medicine, single best answer questions, UKMLA 2025, MLA 2025, medical licensing assessment, UK medical exam, PLAB to UKMLA, IMG UKMLA, international medical graduates UK, medical school finals revision, UKMLA AKT preparation, MLA AKT exam, GMC medical exam, UKMLA practice questions, medical student UK, clinical medicine questions, UKMLA mock exam, AKT exam prep, CPSA preparation, UK medical students, medical finals questions, UKMLA study guide 2025, passmed alternative, geeky medics alternative',
   authors: [{ name: 'MedBanqs Team' }],
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://www.medbanqs.com',
     title: 'UKMLA AKT Question Bank 2025 | Medical School Finals & MLA AKT Prep',
-    description: 'Master UKMLA AKT with 5,000+ SBA questions. Expert explanations, mock exams, personalized study plans. Perfect for UK medical students & IMGs preparing for MLA AKT 2025. 94% pass rate.',
+    description: 'Master UKMLA AKT with 5,000+ SBA questions. Expert explanations, mock exams, personalized study plans. Perfect for UK medical students & IMGs preparing for MLA AKT 2025. 97% pass rate.',
     siteName: 'MedBanqs - UKMLA AKT Preparation Platform',
     images: [
       {
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     site: '@medbanqs',
     creator: '@medbanqs',
     title: 'UKMLA AKT Question Bank 2025 | 5,000+ SBA Questions',
-    description: 'Pass UKMLA AKT & medical school finals with 5,000+ SBA questions. Expert explanations, mock exams. For UK medical students & IMGs. 94% pass rate!',
+    description: 'Pass UKMLA AKT & medical school finals with 5,000+ SBA questions. Expert explanations, mock exams. For UK medical students & IMGs. 97% pass rate!',
     images: ['/og-image.png'],
   },
   robots: {
