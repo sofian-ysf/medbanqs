@@ -33,7 +33,8 @@
       "Bash(/Users/sofianyoussef/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.2/skills/brainstorming/scripts/start-server.sh:*)",
       "Bash(npx tsc:*)",
       "WebFetch(domain:preregexamprep.com)",
-      "Bash(git remote set-url:*)"
+      "Bash(git remote set-url:*)",
+      "Bash(npm view:*)"
     ],
     "deny": []
   }

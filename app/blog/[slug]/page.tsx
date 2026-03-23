@@ -36,20 +36,20 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   
   if (!post) {
     return {
-      title: 'Blog Post Not Found | MasterMLA',
+      title: 'Blog Post Not Found | MedBanqs',
       description: 'The requested blog post could not be found.',
     };
   }
 
   return {
-    title: post.metaTitle || `${post.title} | MasterMLA`,
+    title: post.metaTitle || `${post.title} | MedBanqs`,
     description: post.metaDescription || post.description,
     keywords: post.keywords?.join(', ') || post.tags.join(', '),
     openGraph: {
       title: post.title,
       description: post.description,
-      url: `https://mastermla.com/blog/${post.slug}`,
-      siteName: 'MasterMLA',
+      url: `https://medbanqs.com/blog/${post.slug}`,
+      siteName: 'MedBanqs',
       type: 'article',
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt || post.publishedAt,
@@ -93,15 +93,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     dateModified: post.updatedAt || post.publishedAt,
     publisher: {
       '@type': 'Organization',
-      name: 'MasterMLA',
+      name: 'MedBanqs',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://mastermla.com/mastermla-logo.png',
+        url: 'https://medbanqs.com/medbanqs-logo.png',
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://mastermla.com/blog/${post.slug}`,
+      '@id': `https://medbanqs.com/blog/${post.slug}`,
     },
   };
 
@@ -206,7 +206,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 Ready to Excel in Your Medical Exams?
               </h3>
               <p className="text-gray-700 mb-4">
-                Join thousands of medical students using MasterMLA to prepare for UKMLA, USMLE, and medical finals.
+                Join thousands of medical students using MedBanqs to prepare for UKMLA, USMLE, and medical finals.
               </p>
               <Link
                 href="/auth"

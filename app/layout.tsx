@@ -79,9 +79,9 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', type: 'image/x-icon' },
-      { url: '/mastermla-logo.png', sizes: '32x32', type: 'image/png' },
-      { url: '/mastermla-logo.png', sizes: '16x16', type: 'image/png' },
-      { url: '/mastermla-logo.png', sizes: '192x192', type: 'image/png' },
+      { url: '/medbanqs-logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/medbanqs-logo.png', sizes: '16x16', type: 'image/png' },
+      { url: '/medbanqs-logo.png', sizes: '192x192', type: 'image/png' },
     ],
     apple: '/apple-touch-icon.png',
     shortcut: '/favicon.ico',
@@ -116,8 +116,8 @@ export default function RootLayout({
         
         {/* Favicon links for better compatibility */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/mastermla-logo.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/mastermla-logo.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/medbanqs-logo.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/medbanqs-logo.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         
         {/* Enhanced SEO meta tags for search engines */}

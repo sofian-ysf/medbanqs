@@ -17,7 +17,7 @@ const InstitutionsBelt = () => {
     <section className="bg-warm-bg py-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <p className="text-center text-sm text-dark-muted mb-8">
-          Students from top UK medical schools trust MasterMLA
+          Students from top UK medical schools trust MedBanqs
         </p>
 
         {/* Scrolling Belt - uses Tailwind animation */}

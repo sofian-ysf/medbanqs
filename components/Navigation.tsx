@@ -86,7 +86,7 @@ const Navigation = () => {
         <div className={`flex items-center py-4 ${getContentClasses()}`}>
           <div className="flex items-center flex-1">
             <Link href="/" className="cursor-pointer flex items-center">
-              <img src="/mastermla-logo.png" alt="MasterMLA" className="h-10 w-auto" />
+              <img src="/medbanqs-logo.png" alt="MedBanqs" className="h-10 w-auto" />
               <span className="ml-3 text-xl font-bold text-gray-900">MedBanqs</span>
             </Link>
           </div>

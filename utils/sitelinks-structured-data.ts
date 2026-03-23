@@ -7,7 +7,7 @@ export const organizationSchema = {
   "name": "MedBanqs",
   "alternateName": "Medical MLA",
   "url": "https://www.medbanqs.com",
-  "logo": "https://www.medbanqs.com/mastermla-logo.png",
+  "logo": "https://www.medbanqs.com/medbanqs-logo.png",
   "sameAs": [
     "https://www.facebook.com/medbanqs",
     "https://www.twitter.com/medbanqs",

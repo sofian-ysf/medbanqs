@@ -59,7 +59,7 @@ const INITIAL_BLOGS = [
   },
   {
     topic: "Effective Question Bank Strategies for Medical Exams",
-    keywords: ["question banks", "medical questions", "exam practice", "study strategies", "MasterMLA"],
+    keywords: ["question banks", "medical questions", "exam practice", "study strategies", "MedBanqs"],
     category: "Study Resources",
     contentType: "tips" as const
   }
@@ -90,38 +90,38 @@ async function generateInitialBlogs() {
         id: `blog-initial-${i + 1}`,
         slug,
         title: blogConfig.topic,
-        description: `Comprehensive ${blogConfig.contentType} on ${blogConfig.topic} for medical students. Master key concepts and ace your medical exams with MasterMLA.`,
+        description: `Comprehensive ${blogConfig.contentType} on ${blogConfig.topic} for medical students. Master key concepts and ace your medical exams with MedBanqs.`,
         content,
-        author: "MasterMLA Team",
+        author: "MedBanqs Team",
         publishedAt: now.toISOString(),
         category: blogConfig.category,
         tags: blogConfig.keywords,
         readingTime: Math.floor(content.split(/\s+/).length / 200),
         featured: i < 3, // Feature first 3 blogs
-        metaTitle: `${blogConfig.topic} | MasterMLA Medical Exam Prep`,
+        metaTitle: `${blogConfig.topic} | MedBanqs Medical Exam Prep`,
         metaDescription: `Expert guide on ${blogConfig.topic}. Prepare for UKMLA, USMLE, and medical finals with comprehensive study materials and practice questions.`,
-        keywords: [...blogConfig.keywords, "medical exam", "study guide", "MasterMLA"],
+        keywords: [...blogConfig.keywords, "medical exam", "study guide", "MedBanqs"],
         schema: {
           "@context": "https://schema.org",
           "@type": "Article",
           "headline": blogConfig.topic,
           "author": {
             "@type": "Organization",
-            "name": "MasterMLA"
+            "name": "MedBanqs"
           },
           "publisher": {
             "@type": "Organization",
-            "name": "MasterMLA",
+            "name": "MedBanqs",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://mastermla.com/mastermla-logo.png"
+              "url": "https://medbanqs.com/medbanqs-logo.png"
             }
           },
           "datePublished": now.toISOString(),
           "dateModified": now.toISOString(),
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": `https://mastermla.com/blog/${slug}`
+            "@id": `https://medbanqs.com/blog/${slug}`
           }
         }
       };
@@ -219,7 +219,7 @@ Use these mnemonics and memory techniques:
 2. **Spaced Repetition**
    - Review material at increasing intervals
    - Focus on areas of weakness
-   - Use MasterMLA's adaptive learning algorithm
+   - Use MedBanqs's adaptive learning algorithm
 
 3. **Practice Questions**
    - Complete 20-30 questions daily
@@ -288,19 +288,19 @@ Consider this clinical scenario that demonstrates the practical application of t
 
 ### Next Steps
 
-1. Complete practice questions on MasterMLA
+1. Complete practice questions on MedBanqs
 2. Review any weak areas identified
 3. Discuss challenging concepts with peers
 4. Apply learning in clinical settings
 
 ## Additional Resources
 
-- MasterMLA Question Bank: Targeted practice questions
+- MedBanqs Question Bank: Targeted practice questions
 - Recommended textbooks for deeper understanding
 - Online resources and video tutorials
 - Study group discussions
 
-Remember, success in medical exams comes from consistent practice and smart study strategies. Use MasterMLA to track your progress and identify areas for improvement.
+Remember, success in medical exams comes from consistent practice and smart study strategies. Use MedBanqs to track your progress and identify areas for improvement.
 
 ---
 
@@ -343,7 +343,7 @@ Not all topics are created equal. Concentrate on areas that appear frequently in
 
 ### 6. Utilize Multiple Resources
 - Combine textbooks with online resources
-- Use MasterMLA for structured practice
+- Use MedBanqs for structured practice
 - Watch video explanations for complex topics
 
 ### 7. Create Efficient Study Notes
@@ -395,7 +395,7 @@ Theory without practice won't prepare you for exams.
 
 ## Conclusion
 
-Success in ${config.topic} comes from smart strategies and consistent effort. Implement these tips gradually and find what works best for you. Remember, MasterMLA is here to support your journey with adaptive learning and comprehensive practice questions.
+Success in ${config.topic} comes from smart strategies and consistent effort. Implement these tips gradually and find what works best for you. Remember, MedBanqs is here to support your journey with adaptive learning and comprehensive practice questions.
 
 ---
 
@@ -504,7 +504,7 @@ These topics appear regularly in medical exams:
 - Review articles in medical journals
 
 ### Interactive Learning
-- MasterMLA question banks
+- MedBanqs question banks
 - Clinical case discussions
 - Video demonstrations
 
@@ -517,7 +517,7 @@ These topics appear regularly in medical exams:
 
 ## Conclusion
 
-Mastering ${config.topic} requires dedication and smart study strategies. Use this guide as a roadmap, practice regularly with MasterMLA's adaptive questions, and connect concepts to clinical scenarios. Your journey to exam success starts with understanding these fundamental principles.
+Mastering ${config.topic} requires dedication and smart study strategies. Use this guide as a roadmap, practice regularly with MedBanqs's adaptive questions, and connect concepts to clinical scenarios. Your journey to exam success starts with understanding these fundamental principles.
 
 ---
 

@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const TESTIMONIALS = [
   {
-    quote: "MasterMLA helped me pass on my first attempt! The questions were so similar to the actual exam.",
+    quote: "MedBanqs helped me pass on my first attempt! The questions were so similar to the actual exam.",
     author: "Sarah M.",
     institution: "UCL Graduate",
   },

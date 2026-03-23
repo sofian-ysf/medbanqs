@@ -89,7 +89,7 @@ const PillNavigation = () => {
           <div className={`pill-nav ${isScrolled ? "scrolled" : ""} px-4 py-2 inline-flex items-center gap-2`}>
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 pr-2">
-              <img src="/mastermla-logo.png" alt="MedBanqs" className="h-7 w-7 rounded-md" />
+              <img src="/medbanqs-logo.png" alt="MedBanqs" className="h-7 w-7 rounded-md" />
               <span className="font-semibold text-dark-text">MedBanqs</span>
             </Link>
 
@@ -186,7 +186,7 @@ const PillNavigation = () => {
       <div className={`fixed top-0 right-0 h-full w-full max-w-sm bg-white z-50 mobile-menu ${isMenuOpen ? "open" : ""} sm:hidden`}>
         <div className="flex items-center justify-between p-4 border-b">
           <Link href="/" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
-            <img src="/mastermla-logo.png" alt="MedBanqs" className="h-7 w-7 rounded-md" />
+            <img src="/medbanqs-logo.png" alt="MedBanqs" className="h-7 w-7 rounded-md" />
             <span className="font-semibold text-dark-text">MedBanqs</span>
           </Link>
           <button

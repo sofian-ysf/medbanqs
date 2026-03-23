@@ -83,17 +83,17 @@ export class BlogGenerator {
       id: `blog-${Date.now()}`,
       slug,
       title: prompt.topic,
-      description: `Comprehensive ${prompt.contentType} on ${prompt.topic} for ${prompt.targetAudience}. Master key concepts and ace your medical exams with MasterMLA.`,
+      description: `Comprehensive ${prompt.contentType} on ${prompt.topic} for ${prompt.targetAudience}. Master key concepts and ace your medical exams with MedBanqs.`,
       content: this.generateMockContent(prompt),
-      author: "MasterMLA Team",
+      author: "MedBanqs Team",
       publishedAt: now,
       category: this.categorizeByTopic(prompt.topic),
       tags: prompt.keywords,
       readingTime: Math.floor(Math.random() * 5) + 5,
       featured: Math.random() > 0.7,
-      metaTitle: `${prompt.topic} | MasterMLA Medical Exam Prep`,
+      metaTitle: `${prompt.topic} | MedBanqs Medical Exam Prep`,
       metaDescription: `Expert guide on ${prompt.topic}. Prepare for UKMLA, USMLE, and medical finals with comprehensive study materials and practice questions.`,
-      keywords: [...prompt.keywords, "medical exam", "study guide", "MasterMLA"],
+      keywords: [...prompt.keywords, "medical exam", "study guide", "MedBanqs"],
       schema: this.generateSchema(prompt.topic, slug)
     };
 
@@ -163,7 +163,7 @@ Here are the must-know facts for ${prompt.topic}:
 
 1. **Active Recall**: Test yourself regularly without looking at notes
 2. **Spaced Repetition**: Review material at increasing intervals
-3. **Practice Questions**: Use MasterMLA's question bank for targeted practice
+3. **Practice Questions**: Use MedBanqs's question bank for targeted practice
 4. **Group Study**: Discuss complex topics with peers
 
 ### Time Management
@@ -201,7 +201,7 @@ Mastering ${prompt.topic} requires consistent effort and smart study strategies.
 
 ## Next Steps
 
-Ready to test your knowledge? Try our practice questions on ${prompt.topic} in the MasterMLA app. Track your progress and identify areas for improvement.
+Ready to test your knowledge? Try our practice questions on ${prompt.topic} in the MedBanqs app. Track your progress and identify areas for improvement.
 
 ---
 
@@ -216,21 +216,21 @@ Ready to test your knowledge? Try our practice questions on ${prompt.topic} in t
       "headline": title,
       "author": {
         "@type": "Organization",
-        "name": "MasterMLA"
+        "name": "MedBanqs"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "MasterMLA",
+        "name": "MedBanqs",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://mastermla.com/mastermla-logo.png"
+          "url": "https://medbanqs.com/medbanqs-logo.png"
         }
       },
       "datePublished": new Date().toISOString(),
       "dateModified": new Date().toISOString(),
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": `https://mastermla.com/blog/${slug}`
+        "@id": `https://medbanqs.com/blog/${slug}`
       }
     };
   }
@@ -243,7 +243,7 @@ export async function generateBlogWithClaude(prompt: BlogGenerationPrompt): Prom
     throw new Error('ANTHROPIC_API_KEY is not configured');
   }
 
-  const systemPrompt = `You are an expert medical education content writer for MasterMLA. Create structured, educational blog posts for medical students preparing for UKMLA, USMLE, and finals.
+  const systemPrompt = `You are an expert medical education content writer for MedBanqs. Create structured, educational blog posts for medical students preparing for UKMLA, USMLE, and finals.
 
 CRITICAL: Use clear subsections with ### headings to break up content. Write 2-3 paragraph chunks under each subsection. NO bullet points - use prose format throughout.
 
@@ -363,36 +363,36 @@ REQUIREMENTS:
       title: actualTitle,
       description,
       content,
-      author: "MasterMLA Team",
+      author: "MedBanqs Team",
       publishedAt: new Date().toISOString(),
       category: categorizeByTopic(actualTitle),
       tags: prompt.keywords,
       readingTime: Math.ceil(content.split(/\s+/).length / 200),
       featured: Math.random() > 0.7,
-      metaTitle: `${actualTitle} | MasterMLA Medical Exam Prep`,
+      metaTitle: `${actualTitle} | MedBanqs Medical Exam Prep`,
       metaDescription: description,
-      keywords: [...prompt.keywords, "medical exam", "study guide", "MasterMLA"],
+      keywords: [...prompt.keywords, "medical exam", "study guide", "MedBanqs"],
       schema: {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": actualTitle,
         "author": {
           "@type": "Organization",
-          "name": "MasterMLA"
+          "name": "MedBanqs"
         },
         "publisher": {
           "@type": "Organization",
-          "name": "MasterMLA",
+          "name": "MedBanqs",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://mastermla.com/mastermla-logo.png"
+            "url": "https://medbanqs.com/medbanqs-logo.png"
           }
         },
         "datePublished": new Date().toISOString(),
         "dateModified": new Date().toISOString(),
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": `https://mastermla.com/blog/${slug}`
+          "@id": `https://medbanqs.com/blog/${slug}`
         }
       }
     };

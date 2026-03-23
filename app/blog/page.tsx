@@ -7,14 +7,14 @@ import BlogCard from '@/components/blog/BlogCard';
 import { generateBreadcrumbJsonLd, breadcrumbPaths } from '@/utils/breadcrumb-helper';
 
 export const metadata: Metadata = {
-  title: 'Medical Exam Prep Blog | MasterMLA',
-  description: 'Expert guides and study tips for UKMLA, USMLE Step exams, and medical finals. Ace your medical exams with MasterMLA.',
+  title: 'Medical Exam Prep Blog | MedBanqs',
+  description: 'Expert guides and study tips for UKMLA, USMLE Step exams, and medical finals. Ace your medical exams with MedBanqs.',
   keywords: 'medical exam blog, UKMLA preparation, USMLE study guide, medical finals tips, medical student resources',
   openGraph: {
-    title: 'Medical Exam Prep Blog | MasterMLA',
+    title: 'Medical Exam Prep Blog | MedBanqs',
     description: 'Expert guides and study tips for medical students preparing for exams.',
-    url: 'https://mastermla.com/blog',
-    siteName: 'MasterMLA',
+    url: 'https://medbanqs.com/blog',
+    siteName: 'MedBanqs',
     type: 'website',
   },
 };

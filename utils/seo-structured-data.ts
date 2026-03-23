@@ -6,7 +6,7 @@ export const organizationSchema = {
   "url": "https://www.medbanqs.com",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://www.medbanqs.com/mastermla-logo.png",
+    "url": "https://www.medbanqs.com/medbanqs-logo.png",
     "width": 600,
     "height": 60
   },
@@ -106,7 +106,7 @@ export const websiteSchema = {
     "name": "MedBanqs",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.medbanqs.com/mastermla-logo.png"
+      "url": "https://www.medbanqs.com/medbanqs-logo.png"
     }
   },
   "potentialAction": {

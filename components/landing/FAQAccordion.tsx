@@ -10,15 +10,15 @@ const FAQ_ITEMS = [
   },
   {
     question: "How many questions are included?",
-    answer: "MasterMLA includes over 5,000 UKMLA-style practice questions covering all topics in the MLA content map. New questions are added regularly based on the latest guidelines.",
+    answer: "MedBanqs includes over 5,000 UKMLA-style practice questions covering all topics in the MLA content map. New questions are added regularly based on the latest guidelines.",
   },
   {
     question: "Is there a money-back guarantee?",
-    answer: "Yes! We offer a 7-day money-back guarantee. If you're not satisfied with MasterMLA for any reason, contact us within 7 days for a full refund.",
+    answer: "Yes! We offer a 7-day money-back guarantee. If you're not satisfied with MedBanqs for any reason, contact us within 7 days for a full refund.",
   },
   {
-    question: "Can I access MasterMLA on mobile?",
-    answer: "Absolutely! MasterMLA is fully responsive and works seamlessly on desktop, tablet, and mobile devices. Study anywhere, anytime.",
+    question: "Can I access MedBanqs on mobile?",
+    answer: "Absolutely! MedBanqs is fully responsive and works seamlessly on desktop, tablet, and mobile devices. Study anywhere, anytime.",
   },
   {
     question: "How do I cancel my subscription?",
@@ -46,7 +46,7 @@ const FAQAccordion = () => {
             Frequently asked questions
           </h2>
           <p className="text-lg text-dark-secondary">
-            Everything you need to know about MasterMLA.
+            Everything you need to know about MedBanqs.
           </p>
         </div>
 
