@@ -11,9 +11,10 @@ const DEMO_QUESTION = {
     { id: "b", text: "Troponin levels" },
     { id: "c", text: "Exercise stress test" },
     { id: "d", text: "Discharge with GP follow-up" },
+    { id: "e", text: "CT coronary angiogram" },
   ],
   correctAnswer: "b",
-  explanation: "Troponin levels should be measured first to rule out acute coronary syndrome. This is a time-sensitive investigation that guides immediate management.",
+  explanation: "NICE recommends measuring troponin levels first to rule out acute coronary syndrome. This is a time-sensitive investigation that guides immediate management and determines the urgency of further intervention.",
 };
 
 const InteractiveDemo = () => {

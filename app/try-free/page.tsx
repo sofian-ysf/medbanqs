@@ -24,10 +24,11 @@ const SAMPLE_QUESTIONS: Question[] = [
       "Administer aspirin 300mg, ticagrelor 180mg, and arrange primary PCI",
       "Administer aspirin 300mg and commence thrombolysis",
       "Perform CT coronary angiogram to confirm diagnosis",
-      "Start IV heparin infusion and monitor in CCU"
+      "Start IV heparin infusion and monitor in CCU",
+      "Give GTN spray and repeat ECG in 30 minutes"
     ],
     correctAnswer: 0,
-    explanation: "This patient is presenting with an anterior STEMI (ST-elevation in V1-V4 indicates LAD territory involvement). NICE guidelines recommend primary percutaneous coronary intervention (PCI) as the preferred reperfusion strategy for STEMI if it can be delivered within 120 minutes of the time when fibrinolysis could have been given. Dual antiplatelet therapy with aspirin (300mg loading dose) and a P2Y12 inhibitor (ticagrelor 180mg or prasugrel 60mg) should be administered as soon as possible.\n\nThrombolysis is only considered if primary PCI cannot be delivered within 120 minutes. CT coronary angiography is not appropriate in acute STEMI as it delays definitive treatment. While anticoagulation is important, it is not the priority intervention.",
+    explanation: "This patient is presenting with an anterior STEMI (ST-elevation in V1-V4 indicates LAD territory involvement). NICE guidelines recommend primary percutaneous coronary intervention (PCI) as the preferred reperfusion strategy for STEMI if it can be delivered within 120 minutes of the time when fibrinolysis could have been given. Dual antiplatelet therapy with aspirin (300mg loading dose) and a P2Y12 inhibitor (ticagrelor 180mg or prasugrel 60mg) should be administered as soon as possible.\n\nThrombolysis is only considered if primary PCI cannot be delivered within 120 minutes. CT coronary angiography is not appropriate in acute STEMI as it delays definitive treatment. While anticoagulation is important, it is not the priority intervention. GTN and watchful waiting would be dangerous in confirmed STEMI.",
     clinicalPearl: "Time is muscle! Every 30-minute delay in reperfusion increases mortality by approximately 7.5%. The door-to-balloon time target is <90 minutes.",
     keyLearningPoint: "Primary PCI is superior to thrombolysis for STEMI and should be the default reperfusion strategy in the UK. Always give dual antiplatelet therapy (aspirin + P2Y12 inhibitor) before transfer to the catheter lab.",
     guidelineReference: "NICE NG185: Acute coronary syndromes"
@@ -40,10 +41,11 @@ const SAMPLE_QUESTIONS: Question[] = [
       "LABA + LAMA combination inhaler",
       "SABA alone as required",
       "ICS + LABA combination inhaler",
-      "LAMA alone"
+      "LAMA alone",
+      "High-dose ICS monotherapy"
     ],
     correctAnswer: 0,
-    explanation: "This patient has COPD (FEV1/FVC <0.7, significant smoking history, chronic symptoms) with moderate airflow obstruction (FEV1 65% = GOLD grade 2). She has features suggesting higher risk: 2 moderate exacerbations in the past year.\n\nAccording to NICE guidelines (2019), for patients with COPD who have exacerbations or persistent breathlessness despite using a SABA, the recommended initial maintenance therapy is a LABA + LAMA combination. ICS-containing regimens are reserved for patients with features suggesting asthma-COPD overlap or those with frequent exacerbations despite LABA + LAMA therapy.\n\nSABA alone is insufficient for someone with this symptom burden. LAMA alone would be reasonable but LABA + LAMA provides superior bronchodilation and exacerbation reduction.",
+    explanation: "This patient has COPD (FEV1/FVC <0.7, significant smoking history, chronic symptoms) with moderate airflow obstruction (FEV1 65% = GOLD grade 2). She has features suggesting higher risk: 2 moderate exacerbations in the past year.\n\nAccording to NICE guidelines (2019), for patients with COPD who have exacerbations or persistent breathlessness despite using a SABA, the recommended initial maintenance therapy is a LABA + LAMA combination. ICS-containing regimens are reserved for patients with features suggesting asthma-COPD overlap or those with frequent exacerbations despite LABA + LAMA therapy.\n\nSABA alone is insufficient for someone with this symptom burden. LAMA alone would be reasonable but LABA + LAMA provides superior bronchodilation and exacerbation reduction. High-dose ICS monotherapy has no role in COPD.",
     clinicalPearl: "The 'eosinophil count' is now key in COPD management. Blood eosinophils ≥300 cells/μL suggest potential benefit from ICS. Below 100 cells/μL, ICS are unlikely to help and may increase pneumonia risk.",
     keyLearningPoint: "NICE recommends LABA + LAMA as first-line maintenance for COPD with exacerbations. ICS should only be added if eosinophils are elevated (≥300) or asthmatic features are present.",
     guidelineReference: "NICE NG115: Chronic obstructive pulmonary disease"
@@ -56,10 +58,11 @@ const SAMPLE_QUESTIONS: Question[] = [
       "Urgent 2-week wait upper GI endoscopy",
       "Barium swallow",
       "CT chest, abdomen and pelvis",
-      "Outpatient upper GI endoscopy within 6 weeks"
+      "Outpatient upper GI endoscopy within 6 weeks",
+      "Trial of high-dose PPI for 4 weeks"
     ],
     correctAnswer: 0,
-    explanation: "This patient has multiple red flags for oesophageal malignancy: progressive dysphagia (solids then liquids suggests mechanical obstruction), significant weight loss, and major risk factors (smoking and alcohol). NICE recommends urgent direct access upper GI endoscopy (within 2 weeks) for patients with dysphagia.\n\nBarium swallow may show a lesion but does not allow tissue diagnosis. CT staging would be appropriate after histological diagnosis is confirmed. Routine outpatient endoscopy is inappropriate given the urgency of the presentation.\n\nThe pattern of dysphagia is important: progressive dysphagia to solids then liquids suggests a mechanical obstruction (stricture/cancer). Dysphagia to liquids more than solids suggests a motility disorder.",
+    explanation: "This patient has multiple red flags for oesophageal malignancy: progressive dysphagia (solids then liquids suggests mechanical obstruction), significant weight loss, and major risk factors (smoking and alcohol). NICE recommends urgent direct access upper GI endoscopy (within 2 weeks) for patients with dysphagia.\n\nBarium swallow may show a lesion but does not allow tissue diagnosis. CT staging would be appropriate after histological diagnosis is confirmed. Routine outpatient endoscopy is inappropriate given the urgency of the presentation. A PPI trial would dangerously delay diagnosis.\n\nThe pattern of dysphagia is important: progressive dysphagia to solids then liquids suggests a mechanical obstruction (stricture/cancer). Dysphagia to liquids more than solids suggests a motility disorder.",
     clinicalPearl: "Dysphagia is ALWAYS a red flag symptom requiring urgent investigation. Never attribute dysphagia to anxiety or globus without excluding organic pathology first.",
     keyLearningPoint: "NICE recommends urgent 2-week wait endoscopy for ANY patient presenting with dysphagia. The combination of dysphagia + weight loss has a high positive predictive value for upper GI malignancy.",
     guidelineReference: "NICE NG12: Suspected cancer recognition and referral"
@@ -72,10 +75,11 @@ const SAMPLE_QUESTIONS: Question[] = [
       "IV alteplase followed by consideration for mechanical thrombectomy",
       "Aspirin 300mg and admit to stroke unit",
       "Lower blood pressure to <140/90 before considering thrombolysis",
-      "MRI brain to confirm infarct location before treatment"
+      "MRI brain to confirm infarct location before treatment",
+      "IV alteplase contraindicated due to high BP - give aspirin only"
     ],
     correctAnswer: 0,
-    explanation: "This patient is presenting with a severe acute ischaemic stroke (NIHSS 18 indicates major stroke) within the thrombolysis window (<4.5 hours from symptom onset). CT has excluded haemorrhage. According to NICE and RCP guidelines, IV alteplase (0.9mg/kg, max 90mg) should be administered as soon as possible.\n\nGiven the severity (NIHSS ≥6) and likely large vessel occlusion, she should also be considered for mechanical thrombectomy, which can be performed up to 24 hours in selected patients and has revolutionised outcomes in severe stroke.\n\nBlood pressure up to 185/110 is acceptable before thrombolysis - aggressive lowering can worsen cerebral perfusion. MRI would delay treatment unnecessarily; CT is sufficient to exclude haemorrhage. Aspirin alone would be inadequate for a thrombolysis-eligible patient.",
+    explanation: "This patient is presenting with a severe acute ischaemic stroke (NIHSS 18 indicates major stroke) within the thrombolysis window (<4.5 hours from symptom onset). CT has excluded haemorrhage. According to NICE and RCP guidelines, IV alteplase (0.9mg/kg, max 90mg) should be administered as soon as possible.\n\nGiven the severity (NIHSS ≥6) and likely large vessel occlusion, she should also be considered for mechanical thrombectomy, which can be performed up to 24 hours in selected patients and has revolutionised outcomes in severe stroke.\n\nBlood pressure up to 185/110 is acceptable before thrombolysis - aggressive lowering can worsen cerebral perfusion. MRI would delay treatment unnecessarily; CT is sufficient to exclude haemorrhage. Aspirin alone would be inadequate for a thrombolysis-eligible patient. Her BP of 185/95 is within acceptable range for thrombolysis.",
     clinicalPearl: "The number needed to treat (NNT) with thrombolysis to achieve one additional good outcome is approximately 10 when given within 3 hours. Every 15-minute delay reduces the probability of a good outcome by approximately 4%.",
     keyLearningPoint: "Time is brain! Thrombolysis should be given ASAP within 4.5 hours of stroke onset. Consider thrombectomy for large vessel occlusion (NIHSS ≥6, proximal occlusion) - it has an NNT of approximately 2.5.",
     guidelineReference: "NICE NG128: Stroke and TIA"
@@ -88,10 +92,11 @@ const SAMPLE_QUESTIONS: Question[] = [
       "Add an SGLT2 inhibitor (e.g., empagliflozin)",
       "Add a sulfonylurea (e.g., gliclazide)",
       "Add a DPP-4 inhibitor (e.g., sitagliptin)",
-      "Add basal insulin (e.g., insulin glargine)"
+      "Add basal insulin (e.g., insulin glargine)",
+      "Add pioglitazone"
     ],
     correctAnswer: 0,
-    explanation: "This patient has type 2 diabetes with established cardiovascular disease and obesity. NICE guidelines now recommend that SGLT2 inhibitors (empagliflozin, dapagliflozin, canagliflozin) should be offered as first-line add-on therapy to metformin in patients with established atherosclerotic cardiovascular disease.\n\nSGLT2 inhibitors have demonstrated significant cardiovascular benefits in major trials (EMPA-REG, CANVAS, DECLARE-TIMI 58), reducing cardiovascular death, heart failure hospitalisation, and renal progression. They also promote weight loss (typically 2-3kg), which is beneficial given her BMI of 34.\n\nSulfonylureas increase hypoglycaemia risk and cause weight gain. DPP-4 inhibitors are weight-neutral but lack the cardiovascular protection of SGLT2i. Insulin would cause weight gain and doesn't offer CV protection.",
+    explanation: "This patient has type 2 diabetes with established cardiovascular disease and obesity. NICE guidelines now recommend that SGLT2 inhibitors (empagliflozin, dapagliflozin, canagliflozin) should be offered as first-line add-on therapy to metformin in patients with established atherosclerotic cardiovascular disease.\n\nSGLT2 inhibitors have demonstrated significant cardiovascular benefits in major trials (EMPA-REG, CANVAS, DECLARE-TIMI 58), reducing cardiovascular death, heart failure hospitalisation, and renal progression. They also promote weight loss (typically 2-3kg), which is beneficial given her BMI of 34.\n\nSulfonylureas increase hypoglycaemia risk and cause weight gain. DPP-4 inhibitors are weight-neutral but lack the cardiovascular protection of SGLT2i. Insulin would cause weight gain and doesn't offer CV protection. Pioglitazone is contraindicated post-MI due to fluid retention and heart failure risk.",
     clinicalPearl: "SGLT2 inhibitors should be temporarily stopped during acute illness ('sick day rules') to prevent euglycaemic diabetic ketoacidosis. Patients should also be warned about genital mycotic infections.",
     keyLearningPoint: "NICE now recommends SGLT2 inhibitors as first-line add-on to metformin in T2DM with established CVD or high CV risk. They provide triple benefits: glucose lowering, CV protection, and renal protection.",
     guidelineReference: "NICE NG28: Type 2 diabetes in adults"
@@ -104,10 +109,11 @@ const SAMPLE_QUESTIONS: Question[] = [
       "Offer a course of low-intensity psychological intervention (e.g., guided self-help, CBT)",
       "Start sertraline 50mg daily",
       "Refer for urgent psychiatric assessment",
-      "Prescribe zopiclone for sleep and review in 2 weeks"
+      "Prescribe zopiclone for sleep and review in 2 weeks",
+      "Start mirtazapine 15mg at night"
     ],
     correctAnswer: 0,
-    explanation: "This patient meets criteria for a depressive episode (≥2 weeks of low mood, anhedonia, plus associated symptoms). The severity appears mild-to-moderate: she has passive death thoughts but no active suicidal ideation, plans, or intent, and is still engaging with healthcare.\n\nNICE guidelines recommend a stepped-care approach. For mild-to-moderate depression, first-line treatment should be low-intensity psychological interventions such as guided self-help based on CBT principles, computerised CBT, or structured group physical activity programmes.\n\nAntidepressants are not recommended as first-line for mild-to-moderate depression (only for moderate-to-severe, or if psychological therapy hasn't helped). Urgent psychiatric referral is not indicated without active suicidal intent or psychotic features. Hypnotics don't treat the underlying depression.",
+    explanation: "This patient meets criteria for a depressive episode (≥2 weeks of low mood, anhedonia, plus associated symptoms). The severity appears mild-to-moderate: she has passive death thoughts but no active suicidal ideation, plans, or intent, and is still engaging with healthcare.\n\nNICE guidelines recommend a stepped-care approach. For mild-to-moderate depression, first-line treatment should be low-intensity psychological interventions such as guided self-help based on CBT principles, computerised CBT, or structured group physical activity programmes.\n\nAntidepressants (sertraline, mirtazapine) are not recommended as first-line for mild-to-moderate depression (only for moderate-to-severe, or if psychological therapy hasn't helped). Urgent psychiatric referral is not indicated without active suicidal intent or psychotic features. Hypnotics don't treat the underlying depression.",
     clinicalPearl: "Always ask about suicidal thoughts in a graduated way: passive death wishes → active suicidal ideation → plans → intent → means. This patient has passive thoughts only, which is concerning but doesn't require immediate crisis intervention.",
     keyLearningPoint: "NICE recommends psychological interventions as first-line for mild-to-moderate depression. Antidepressants should be reserved for moderate-to-severe depression, or when psychological therapy hasn't worked.",
     guidelineReference: "NICE NG222: Depression in adults"
@@ -120,10 +126,11 @@ const SAMPLE_QUESTIONS: Question[] = [
       "Start ramipril and titrate to maximum tolerated dose",
       "Add doxazosin to improve blood pressure control",
       "No change needed - continue current management",
-      "Start furosemide to protect the kidneys"
+      "Start furosemide to protect the kidneys",
+      "Switch amlodipine to bendroflumethiazide"
     ],
     correctAnswer: 0,
-    explanation: "This patient has CKD stage 3b (eGFR 30-44) with significantly elevated albuminuria (ACR 35 mg/mmol = A3 category, severely increased). He also has diabetes and suboptimal blood pressure control.\n\nNICE recommends ACE inhibitors (or ARBs if intolerant) for ALL patients with diabetes AND CKD with ACR ≥3 mg/mmol, regardless of blood pressure. The renoprotective effects of ACE inhibitors extend beyond blood pressure lowering - they reduce intraglomerular pressure and proteinuria, slowing CKD progression.\n\nAdditionally, his BP of 145/88 exceeds the target of <130/80 mmHg recommended for patients with diabetes and CKD with significant proteinuria. The ACE inhibitor will help achieve this target.\n\nDoxazosin doesn't offer renoprotection. Continuing without change ignores guideline-recommended therapy. Loop diuretics don't slow CKD progression.",
+    explanation: "This patient has CKD stage 3b (eGFR 30-44) with significantly elevated albuminuria (ACR 35 mg/mmol = A3 category, severely increased). He also has diabetes and suboptimal blood pressure control.\n\nNICE recommends ACE inhibitors (or ARBs if intolerant) for ALL patients with diabetes AND CKD with ACR ≥3 mg/mmol, regardless of blood pressure. The renoprotective effects of ACE inhibitors extend beyond blood pressure lowering - they reduce intraglomerular pressure and proteinuria, slowing CKD progression.\n\nAdditionally, his BP of 145/88 exceeds the target of <130/80 mmHg recommended for patients with diabetes and CKD with significant proteinuria. The ACE inhibitor will help achieve this target.\n\nDoxazosin doesn't offer renoprotection. Continuing without change ignores guideline-recommended therapy. Loop diuretics and thiazides don't slow CKD progression.",
     clinicalPearl: "When starting ACE inhibitors in CKD, accept up to a 25% rise in creatinine or 30% fall in eGFR. This reflects reduced hyperfiltration and is renoprotective long-term. Only stop if the rise exceeds this threshold.",
     keyLearningPoint: "ACE inhibitors are indicated for ALL diabetic patients with ACR ≥3 mg/mmol, regardless of blood pressure. They slow CKD progression through haemodynamic and non-haemodynamic mechanisms.",
     guidelineReference: "NICE NG203: Chronic kidney disease"
@@ -136,10 +143,11 @@ const SAMPLE_QUESTIONS: Question[] = [
       "Methotrexate with folic acid supplementation",
       "Ibuprofen and physiotherapy",
       "Prednisolone monotherapy",
-      "Hydroxychloroquine"
+      "Hydroxychloroquine",
+      "Adalimumab (anti-TNF therapy)"
     ],
     correctAnswer: 0,
-    explanation: "This patient has a typical presentation of rheumatoid arthritis: symmetrical small joint synovitis, prolonged morning stiffness (>1 hour), elevated inflammatory markers, and positive anti-CCP antibodies (which are highly specific for RA and predict erosive disease).\n\nNICE recommends starting disease-modifying anti-rheumatic drugs (DMARDs) as soon as possible after diagnosis - ideally within 3 months of symptom onset. Methotrexate is the first-line DMARD of choice, typically started at 7.5-10mg weekly with folic acid 5mg weekly (not on the methotrexate day) to reduce side effects.\n\nNSAIDs alone don't modify disease progression. Prednisolone may be used as short-term bridging therapy but not as monotherapy due to long-term risks. Hydroxychloroquine is less effective than methotrexate as monotherapy for RA.",
+    explanation: "This patient has a typical presentation of rheumatoid arthritis: symmetrical small joint synovitis, prolonged morning stiffness (>1 hour), elevated inflammatory markers, and positive anti-CCP antibodies (which are highly specific for RA and predict erosive disease).\n\nNICE recommends starting disease-modifying anti-rheumatic drugs (DMARDs) as soon as possible after diagnosis - ideally within 3 months of symptom onset. Methotrexate is the first-line DMARD of choice, typically started at 7.5-10mg weekly with folic acid 5mg weekly (not on the methotrexate day) to reduce side effects.\n\nNSAIDs alone don't modify disease progression. Prednisolone may be used as short-term bridging therapy but not as monotherapy due to long-term risks. Hydroxychloroquine is less effective than methotrexate as monotherapy. Biologics like adalimumab are reserved for DMARD-refractory disease.",
     clinicalPearl: "Anti-CCP antibodies are more specific than rheumatoid factor for RA (specificity ~95% vs ~80%) and their presence predicts more aggressive, erosive disease requiring prompt DMARD therapy.",
     keyLearningPoint: "Early DMARD therapy (within 3 months) improves long-term outcomes in RA. Methotrexate is first-line. The goal is 'treat-to-target' - aiming for remission or low disease activity within 6 months.",
     guidelineReference: "NICE NG100: Rheumatoid arthritis"
@@ -152,10 +160,11 @@ const SAMPLE_QUESTIONS: Question[] = [
       "IV magnesium sulfate and labetalol, then plan delivery",
       "Oral nifedipine and outpatient monitoring",
       "Immediate caesarean section without stabilisation",
-      "IV hydralazine and admit for observation"
+      "IV hydralazine and admit for observation until term",
+      "Oral labetalol and betamethasone, delay delivery 48 hours"
     ],
     correctAnswer: 0,
-    explanation: "This patient has severe pre-eclampsia with features of impending eclampsia (severe hypertension, proteinuria, severe headache) and HELLP syndrome (Haemolysis, Elevated Liver enzymes, Low Platelets - her platelets are 85 and ALT is elevated).\n\nNICE recommends IV magnesium sulfate for women with severe pre-eclampsia who have features suggesting imminent eclampsia (severe headache, visual disturbance, epigastric pain, hyperreflexia, papilloedema). The loading dose is 4g IV over 5-15 minutes, followed by 1g/hour infusion.\n\nBlood pressure should be controlled urgently with IV labetalol (or hydralazine if contraindicated) to prevent hypertensive complications. Once stabilised, delivery should be planned - this is the only definitive treatment for pre-eclampsia.\n\nImmediate section without stabilisation risks maternal stroke. Outpatient management is inappropriate for severe disease. Observation alone without magnesium risks seizures.",
+    explanation: "This patient has severe pre-eclampsia with features of impending eclampsia (severe hypertension, proteinuria, severe headache) and HELLP syndrome (Haemolysis, Elevated Liver enzymes, Low Platelets - her platelets are 85 and ALT is elevated).\n\nNICE recommends IV magnesium sulfate for women with severe pre-eclampsia who have features suggesting imminent eclampsia (severe headache, visual disturbance, epigastric pain, hyperreflexia, papilloedema). The loading dose is 4g IV over 5-15 minutes, followed by 1g/hour infusion.\n\nBlood pressure should be controlled urgently with IV labetalol (or hydralazine if contraindicated) to prevent hypertensive complications. Once stabilised, delivery should be planned - this is the only definitive treatment for pre-eclampsia. At 34 weeks with HELLP, prolonging pregnancy is dangerous.\n\nImmediate section without stabilisation risks maternal stroke. Outpatient management and expectant management are inappropriate for severe disease with HELLP.",
     clinicalPearl: "Magnesium sulfate reduces eclampsia risk by approximately 50%. Monitor for magnesium toxicity: loss of patellar reflexes (first sign), respiratory depression. The antidote is calcium gluconate 1g IV.",
     keyLearningPoint: "Severe pre-eclampsia with headache/visual symptoms needs IV magnesium sulfate (seizure prophylaxis), BP control (prevent stroke), and delivery planning. Delivery is the only cure.",
     guidelineReference: "NICE NG133: Hypertension in pregnancy"
@@ -168,10 +177,11 @@ const SAMPLE_QUESTIONS: Question[] = [
       "Single dose of oral dexamethasone and discharge with safety-netting advice",
       "Nebulised adrenaline and admit for observation",
       "Oral amoxicillin and outpatient follow-up",
-      "Chest X-ray to exclude epiglottitis"
+      "Chest X-ray to exclude epiglottitis",
+      "Nebulised budesonide and discharge"
     ],
     correctAnswer: 0,
-    explanation: "This child has mild croup (laryngotracheobronchitis) - characterised by the classic triad of barking cough, stridor, and hoarse voice, typically following a viral prodrome. Severity assessment shows mild disease: stridor only at rest/when agitated, mild chest wall recession, alert and interactive, normal oxygen saturations.\n\nFor mild-to-moderate croup, NICE recommends a single dose of oral dexamethasone (0.15mg/kg, typically 150mcg/kg). This reduces the severity and duration of symptoms and decreases the need for subsequent medical visits. The child can be discharged with appropriate safety-netting advice.\n\nNebulised adrenaline is reserved for severe croup with significant respiratory distress. Antibiotics are not indicated as croup is viral (usually parainfluenza). X-ray is unnecessary and would show the classic 'steeple sign' but doesn't change management for typical presentations.",
+    explanation: "This child has mild croup (laryngotracheobronchitis) - characterised by the classic triad of barking cough, stridor, and hoarse voice, typically following a viral prodrome. Severity assessment shows mild disease: stridor only at rest/when agitated, mild chest wall recession, alert and interactive, normal oxygen saturations.\n\nFor mild-to-moderate croup, NICE recommends a single dose of oral dexamethasone (0.15mg/kg, typically 150mcg/kg). This reduces the severity and duration of symptoms and decreases the need for subsequent medical visits. The child can be discharged with appropriate safety-netting advice.\n\nNebulised adrenaline is reserved for severe croup with significant respiratory distress. Antibiotics are not indicated as croup is viral (usually parainfluenza). X-ray is unnecessary and would show the classic 'steeple sign' but doesn't change management. Oral dexamethasone is preferred over nebulised budesonide.",
     clinicalPearl: "Croup typically affects children aged 6 months to 3 years and is worse at night. The 'steeple sign' on X-ray (subglottic narrowing) is classic but X-rays are rarely needed if the clinical picture is clear.",
     keyLearningPoint: "A single dose of oral corticosteroid (dexamethasone 150mcg/kg) is recommended for ALL children with croup, regardless of severity. Even mild cases benefit from reduced symptom duration.",
     guidelineReference: "NICE NG51: Croup"
@@ -184,10 +194,11 @@ const SAMPLE_QUESTIONS: Question[] = [
       "Potent topical corticosteroid combined with vitamin D analogue",
       "Oral methotrexate",
       "Referral for phototherapy",
-      "Continue current treatment for longer"
+      "Continue current treatment for longer",
+      "Coal tar preparation"
     ],
     correctAnswer: 0,
-    explanation: "This patient has chronic plaque psoriasis with moderate disease severity (5% BSA). The description of well-demarcated erythematous plaques with silvery scale in a typical distribution (extensor surfaces) is classic for psoriasis.\n\nNICE recommends a stepwise approach to psoriasis management. For localised plaque psoriasis that hasn't responded to mild topical steroids, the next step is a potent topical corticosteroid used in combination with a vitamin D analogue (such as calcipotriol/betamethasone dipropionate combination). This combination is more effective than either agent alone.\n\nSystemic therapy (methotrexate) is reserved for extensive disease (>10% BSA) or disease causing significant functional impairment. Phototherapy is considered when topical therapy has failed. Continuing ineffective treatment is inappropriate.",
+    explanation: "This patient has chronic plaque psoriasis with moderate disease severity (5% BSA). The description of well-demarcated erythematous plaques with silvery scale in a typical distribution (extensor surfaces) is classic for psoriasis.\n\nNICE recommends a stepwise approach to psoriasis management. For localised plaque psoriasis that hasn't responded to mild topical steroids, the next step is a potent topical corticosteroid used in combination with a vitamin D analogue (such as calcipotriol/betamethasone dipropionate combination). This combination is more effective than either agent alone.\n\nSystemic therapy (methotrexate) is reserved for extensive disease (>10% BSA) or disease causing significant functional impairment. Phototherapy is considered when topical therapy has failed. Continuing ineffective treatment is inappropriate. Coal tar is less effective and cosmetically unacceptable to most patients.",
     clinicalPearl: "Apply vitamin D analogues in the morning and corticosteroids at night, or use a combination product. Warn patients that vitamin D analogues can cause perilesional irritation initially.",
     keyLearningPoint: "For plaque psoriasis, first-line is potent corticosteroid + vitamin D analogue. Systemic therapy (methotrexate, ciclosporin) is reserved for extensive (>10% BSA), resistant, or high-impact disease.",
     guidelineReference: "NICE NG153: Psoriasis"
@@ -200,10 +211,11 @@ const SAMPLE_QUESTIONS: Question[] = [
       "Legionella pneumophila",
       "Streptococcus pneumoniae",
       "Mycoplasma pneumoniae",
-      "Staphylococcus aureus"
+      "Staphylococcus aureus",
+      "Klebsiella pneumoniae"
     ],
     correctAnswer: 0,
-    explanation: "The clinical picture strongly suggests Legionnaires' disease (Legionella pneumophila). Key clues include: occupational exposure to air conditioning systems (Legionella thrives in warm water systems, cooling towers, and air conditioning units), the constellation of hyponatraemia (Na⁺ 128) + lymphopenia + high inflammatory markers, dry cough progressing to pneumonia, and gastrointestinal/neurological symptoms often accompany this infection.\n\nLegionella characteristically causes hyponatraemia (due to SIADH) more frequently than other pneumonia pathogens - this is a classic exam pearl. The lymphopenia and disproportionately high CRP are also typical.\n\nStreptococcus pneumoniae is the commonest cause of CAP but doesn't typically cause hyponatraemia. Mycoplasma affects younger patients and causes milder disease. Staphylococcus aureus pneumonia usually follows influenza or occurs in IV drug users.",
+    explanation: "The clinical picture strongly suggests Legionnaires' disease (Legionella pneumophila). Key clues include: occupational exposure to air conditioning systems (Legionella thrives in warm water systems, cooling towers, and air conditioning units), the constellation of hyponatraemia (Na⁺ 128) + lymphopenia + high inflammatory markers, dry cough progressing to pneumonia, and gastrointestinal/neurological symptoms often accompany this infection.\n\nLegionella characteristically causes hyponatraemia (due to SIADH) more frequently than other pneumonia pathogens - this is a classic exam pearl. The lymphopenia and disproportionately high CRP are also typical.\n\nStreptococcus pneumoniae is the commonest cause of CAP but doesn't typically cause hyponatraemia. Mycoplasma affects younger patients and causes milder disease. Staphylococcus aureus pneumonia usually follows influenza or occurs in IV drug users. Klebsiella typically affects alcoholics and diabetics.",
     clinicalPearl: "The triad of pneumonia + hyponatraemia + deranged LFTs should make you think of Legionella. Urinary Legionella antigen test is rapid and sensitive for L. pneumophila serogroup 1 (causes ~80% of cases).",
     keyLearningPoint: "Legionella clues: water source exposure, hyponatraemia (SIADH), lymphopenia, deranged LFTs, diarrhoea, confusion. Test with urinary Legionella antigen. Treat with fluoroquinolone or macrolide.",
     guidelineReference: "NICE NG138: Pneumonia (community-acquired)"
@@ -216,10 +228,11 @@ const SAMPLE_QUESTIONS: Question[] = [
       "Watch and wait with regular monitoring",
       "Immediate chemotherapy with FCR regimen",
       "Urgent bone marrow transplant referral",
-      "Start prednisolone 1mg/kg"
+      "Start prednisolone 1mg/kg",
+      "Commence ibrutinib"
     ],
     correctAnswer: 0,
-    explanation: "This patient has chronic lymphocytic leukaemia (CLL) - confirmed by mature lymphocytosis with smear cells (ruptured fragile lymphocytes) on film and the characteristic immunophenotype (CD5+, CD19+, CD23+).\n\nAlthough she has a high lymphocyte count, her disease is relatively early stage: she has mild anaemia (Hb 95 g/L) and thrombocytopenia, but these are not severe. Importantly, CLL is often indolent and early treatment does NOT improve survival compared to watch-and-wait.\n\nNICE and BSH guidelines recommend treatment only when there are clear indications: symptomatic disease, progressive marrow failure (Hb <100, platelets <100), massive/progressive lymphadenopathy, or doubling time <6 months. Otherwise, regular monitoring is appropriate.\n\nStarting chemotherapy too early exposes patients to unnecessary toxicity without survival benefit. BMT is for younger patients with high-risk/relapsed disease. Steroids alone are not standard CLL therapy.",
+    explanation: "This patient has chronic lymphocytic leukaemia (CLL) - confirmed by mature lymphocytosis with smear cells (ruptured fragile lymphocytes) on film and the characteristic immunophenotype (CD5+, CD19+, CD23+).\n\nAlthough she has a high lymphocyte count, her disease is relatively early stage: she has mild anaemia (Hb 95 g/L) and thrombocytopenia, but these are not severe. Importantly, CLL is often indolent and early treatment does NOT improve survival compared to watch-and-wait.\n\nNICE and BSH guidelines recommend treatment only when there are clear indications: symptomatic disease, progressive marrow failure (Hb <100, platelets <100), massive/progressive lymphadenopathy, or doubling time <6 months. Otherwise, regular monitoring is appropriate.\n\nStarting chemotherapy or targeted therapy (ibrutinib) too early exposes patients to unnecessary toxicity without survival benefit. BMT is for younger patients with high-risk/relapsed disease. Steroids alone are not standard CLL therapy.",
     clinicalPearl: "Smear cells (smudge cells) on blood film are characteristic of CLL - they result from fragile lymphocytes rupturing during slide preparation. Their presence is so typical that it's almost diagnostic.",
     keyLearningPoint: "CLL is often managed with 'watch and wait' - early treatment doesn't improve survival. Treat only for: symptomatic disease, progressive marrow failure, massive adenopathy, or rapid doubling time.",
     guidelineReference: "BSH Guidelines: CLL"
@@ -232,10 +245,11 @@ const SAMPLE_QUESTIONS: Question[] = [
       "Administer naloxone IV/IM and support airway",
       "Perform CT head to exclude intracranial pathology",
       "Intubate and ventilate immediately",
-      "Administer flumazenil IV"
+      "Administer flumazenil IV",
+      "Obtain arterial blood gas before treatment"
     ],
     correctAnswer: 0,
-    explanation: "This patient is presenting with the classic opioid toxidrome: reduced consciousness (GCS 7), pinpoint pupils (miosis), respiratory depression (RR 6), and evidence of IV drug use (track marks). This is a life-threatening emergency.\n\nNaloxone is a competitive opioid antagonist that rapidly reverses opioid effects. It should be administered immediately via IV, IM, or intranasal routes. The initial dose is typically 400mcg IV, repeated every 2-3 minutes as needed. Simultaneously, basic airway manoeuvres and assisted ventilation with bag-valve-mask should be provided.\n\nCT head would delay life-saving treatment and the clinical picture clearly points to opioid toxicity. Intubation may become necessary if naloxone is ineffective, but naloxone often works rapidly and avoids the risks of intubation. Flumazenil (benzodiazepine antagonist) is not indicated and could precipitate seizures.",
+    explanation: "This patient is presenting with the classic opioid toxidrome: reduced consciousness (GCS 7), pinpoint pupils (miosis), respiratory depression (RR 6), and evidence of IV drug use (track marks). This is a life-threatening emergency.\n\nNaloxone is a competitive opioid antagonist that rapidly reverses opioid effects. It should be administered immediately via IV, IM, or intranasal routes. The initial dose is typically 400mcg IV, repeated every 2-3 minutes as needed. Simultaneously, basic airway manoeuvres and assisted ventilation with bag-valve-mask should be provided.\n\nCT head would delay life-saving treatment and the clinical picture clearly points to opioid toxicity. Intubation may become necessary if naloxone is ineffective, but naloxone often works rapidly and avoids the risks of intubation. Flumazenil (benzodiazepine antagonist) is not indicated and could precipitate seizures. Waiting for ABG results would be dangerous.",
     clinicalPearl: "Naloxone has a shorter half-life (30-90 minutes) than most opioids. Patients who respond may re-sedate as naloxone wears off - observe for at least 2 hours after last dose, longer for long-acting opioids like methadone.",
     keyLearningPoint: "The opioid toxidrome: pinpoint pupils + respiratory depression + reduced consciousness. Treat immediately with naloxone. Remember naloxone's short half-life means re-sedation can occur.",
     guidelineReference: "RCEM: Opioid toxicity guidelines"
@@ -248,10 +262,11 @@ const SAMPLE_QUESTIONS: Question[] = [
       "Follow the LPA holder's decision as it reflects the patient's wishes",
       "Treat according to the daughter's wishes as she is present",
       "Escalate to full treatment as this is the safest legal option",
-      "Withhold all treatment as the prognosis is poor"
+      "Withhold all treatment as the prognosis is poor",
+      "Refer to the Court of Protection for a decision"
     ],
     correctAnswer: 0,
-    explanation: "When a patient lacks capacity, decision-making follows a clear hierarchy under the Mental Capacity Act 2005. If a valid and applicable Lasting Power of Attorney (LPA) for health and welfare exists, the attorney has legal authority to make decisions on the patient's behalf, including decisions about life-sustaining treatment (if the LPA specifically grants this authority).\n\nThe LPA holder (the son) must make decisions in the patient's best interests, considering her previously expressed wishes. The documented preference against life-prolonging treatment should guide management. The daughter's views should be considered as part of the best interests assessment, but she does not have legal decision-making authority if an LPA exists.\n\nTreating against the LPA's decision could constitute assault. Withholding all treatment is not appropriate - comfort care and symptom management should continue.",
+    explanation: "When a patient lacks capacity, decision-making follows a clear hierarchy under the Mental Capacity Act 2005. If a valid and applicable Lasting Power of Attorney (LPA) for health and welfare exists, the attorney has legal authority to make decisions on the patient's behalf, including decisions about life-sustaining treatment (if the LPA specifically grants this authority).\n\nThe LPA holder (the son) must make decisions in the patient's best interests, considering her previously expressed wishes. The documented preference against life-prolonging treatment should guide management. The daughter's views should be considered as part of the best interests assessment, but she does not have legal decision-making authority if an LPA exists.\n\nTreating against the LPA's decision could constitute assault. Withholding all treatment is not appropriate - comfort care and symptom management should continue. Court of Protection referral is unnecessary when a valid LPA exists.",
     clinicalPearl: "An LPA for health and welfare only comes into effect when the patient loses capacity. Check if it specifically includes authority for life-sustaining treatment decisions - not all LPAs grant this power.",
     keyLearningPoint: "Decision-making hierarchy when patient lacks capacity: (1) Valid advance decision, (2) LPA for health and welfare, (3) Court-appointed deputy, (4) Best interests decision by clinical team (consulting family/carers).",
     guidelineReference: "Mental Capacity Act 2005; GMC: Treatment and care towards end of life"
