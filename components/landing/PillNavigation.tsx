@@ -8,11 +8,10 @@ import { auth } from "@/lib/firebase";
 import { onAuthStateChanged, signOut, User as FirebaseUser } from "firebase/auth";
 
 const NAV_ITEMS = [
+  { href: "/try-free", label: "Try Free", highlight: true },
   { href: "/#features", label: "Features" },
   { href: "/pricing", label: "Pricing" },
-  { href: "/auth?redirect=/dashboard/flashcards", label: "Flashcards" },
   { href: "/blog", label: "Blog" },
-  { href: "/about", label: "About" },
 ];
 
 const PillNavigation = () => {
@@ -86,30 +85,36 @@ const PillNavigation = () => {
       <nav className="fixed top-0 w-full z-50 py-4 px-4">
         <div className="max-w-7xl mx-auto w-full flex justify-between items-center">
           {/* Main Nav Pill */}
-          <div className={`pill-nav ${isScrolled ? "scrolled" : ""} px-4 py-2 inline-flex items-center gap-2`}>
+          <div className={`pill-nav ${isScrolled ? "scrolled" : ""} px-3 md:px-4 py-2 inline-flex items-center gap-2`}>
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 pr-2">
+            <Link href="/" className="flex items-center gap-2 pr-1 md:pr-2">
               <img src="/medbanqs-logo.png" alt="MedBanqs" className="h-7 w-7 rounded-md" />
-              <span className="font-semibold text-dark-text">MedBanqs</span>
+              <span className="font-semibold text-dark-text hidden sm:inline">MedBanqs</span>
             </Link>
 
-            {/* Divider */}
-            <div className="w-px h-5 bg-black/10" />
+            {/* Divider - hidden on mobile */}
+            <div className="hidden md:block w-px h-5 bg-black/10" />
 
-            {/* Nav Links */}
-            {NAV_ITEMS.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                className="px-3 py-1.5 text-sm text-gray-600 hover:text-black hover:bg-black/5 rounded-full transition-colors whitespace-nowrap"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {/* Nav Links - hidden on mobile */}
+            <div className="hidden md:flex items-center gap-1">
+              {NAV_ITEMS.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className={`px-3 py-1.5 text-sm rounded-full transition-colors whitespace-nowrap ${
+                    (item as any).highlight
+                      ? "text-emerald-600 font-medium hover:bg-emerald-50"
+                      : "text-gray-600 hover:text-black hover:bg-black/5"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
 
             {/* Mobile Hamburger */}
             <button
-              className="sm:hidden p-2 -mr-1"
+              className="md:hidden p-2 -mr-1 ml-1"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -118,7 +123,7 @@ const PillNavigation = () => {
           </div>
 
           {/* Auth Pill */}
-          <div className={`pill-nav ${isScrolled ? "scrolled" : ""} px-3 py-2 inline-flex items-center gap-2`}>
+          <div className={`pill-nav ${isScrolled ? "scrolled" : ""} px-2 md:px-3 py-2 inline-flex items-center gap-1 md:gap-2`}>
             {loading ? (
               <div className="w-8 h-8 rounded-full bg-gray-200 animate-pulse" />
             ) : user ? (
@@ -162,10 +167,10 @@ const PillNavigation = () => {
               </div>
             ) : (
               <>
-                <Link href="/auth" className="px-3 py-1.5 text-sm text-gray-600 hover:text-black transition-colors">
+                <Link href="/auth" className="hidden md:block px-3 py-1.5 text-sm text-gray-600 hover:text-black transition-colors">
                   Login
                 </Link>
-                <Link href="/pricing" className="bg-dark-text text-white px-4 py-1.5 text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">
+                <Link href="/pricing" className="bg-dark-text text-white px-3 md:px-4 py-1.5 text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">
                   Get Started
                 </Link>
               </>
@@ -177,13 +182,13 @@ const PillNavigation = () => {
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <div
-          className="fixed inset-0 z-40 mobile-overlay open sm:hidden"
+          className="fixed inset-0 z-40 bg-black/50 md:hidden"
           onClick={() => setIsMenuOpen(false)}
         />
       )}
 
       {/* Mobile Menu */}
-      <div className={`fixed top-0 right-0 h-full w-full max-w-sm bg-white z-50 mobile-menu ${isMenuOpen ? "open" : ""} sm:hidden`}>
+      <div className={`fixed top-0 right-0 h-full w-full max-w-sm bg-white z-50 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"} md:hidden`}>
         <div className="flex items-center justify-between p-4 border-b">
           <Link href="/" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
             <img src="/medbanqs-logo.png" alt="MedBanqs" className="h-7 w-7 rounded-md" />
@@ -197,12 +202,24 @@ const PillNavigation = () => {
           </button>
         </div>
 
-        <div className="p-4 space-y-2">
-          {NAV_ITEMS.map((item) => (
+        <div className="p-4 space-y-1">
+          {/* Try Free - Highlighted */}
+          <Link
+            href="/try-free"
+            className="flex items-center justify-between bg-emerald-50 text-emerald-700 font-semibold px-4 py-3 rounded-xl mb-3"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <span>Try 15 Free Questions</span>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+
+          {NAV_ITEMS.filter(item => item.href !== '/try-free').map((item) => (
             <Link
               key={item.label}
               href={item.href}
-              className="block px-4 py-3 text-dark-text font-medium hover:bg-gray-50 rounded-lg"
+              className="block px-4 py-3 text-gray-700 font-medium hover:bg-gray-50 rounded-lg"
               onClick={() => setIsMenuOpen(false)}
             >
               {item.label}
@@ -217,7 +234,7 @@ const PillNavigation = () => {
                 <p className="text-sm font-medium text-dark-text">{getUserDisplayName()}</p>
                 <p className="text-xs text-dark-muted">{user.email}</p>
               </div>
-              <Link href="/dashboard" className="block w-full pill-btn pill-btn-primary py-3 text-center font-medium" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/dashboard" className="block w-full bg-black text-white py-3 text-center font-medium rounded-xl" onClick={() => setIsMenuOpen(false)}>
                 Dashboard
               </Link>
               <button onClick={handleSignOut} className="block w-full py-3 text-center text-red-600 font-medium">
@@ -226,10 +243,10 @@ const PillNavigation = () => {
             </div>
           ) : (
             <div className="space-y-3">
-              <Link href="/pricing" className="block w-full pill-btn pill-btn-primary py-3 text-center font-medium" onClick={() => setIsMenuOpen(false)}>
-                Get Started Free
+              <Link href="/pricing" className="block w-full bg-black text-white py-3.5 text-center font-semibold rounded-xl" onClick={() => setIsMenuOpen(false)}>
+                Get Started
               </Link>
-              <Link href="/auth" className="block w-full pill-btn pill-btn-secondary py-3 text-center font-medium" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/auth" className="block w-full py-3 text-center text-gray-700 font-medium border border-gray-300 rounded-xl" onClick={() => setIsMenuOpen(false)}>
                 Login
               </Link>
             </div>
